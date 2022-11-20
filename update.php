@@ -1,10 +1,10 @@
 <?php
-require_once "connect\connect.php";
+    require_once ".\settings\settings.php";
 
     $id = $_GET['id'];
     $users = mysqli_query($connect, "SELECT * FROM `loggins` WHERE `id` = '$id'");
     $users = mysqli_fetch_assoc($users);
-?>
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">

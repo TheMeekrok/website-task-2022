@@ -1,6 +1,6 @@
 <?php    
-    require_once '..\connect\connect.php';
-    ?>
+    require_once "..\settings\settings.php";
+?>
 
 <!DOCTYPE html>
 <html lang='ru'>

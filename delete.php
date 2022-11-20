@@ -1,6 +1,6 @@
 <?php
 
-require_once "connect\connect.php";
+require_once "..\settings\settings.php";
 
 $id = $_GET['id'];
 
