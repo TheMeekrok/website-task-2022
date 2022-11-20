@@ -12,6 +12,7 @@
     
 </head>
 
+
 <body>
     <form action = "sing.php" method="post">
         <button class ="sing_but" type="submit">Sign in</button>
