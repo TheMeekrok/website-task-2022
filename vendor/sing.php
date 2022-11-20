@@ -14,7 +14,7 @@ else{
     foreach ($pruducts as $loggins){
         #Проверка на админа
         #Можно потом либо по индексу админа проверять либо добавить в базу колонку с пометкой на админа
-        if ($login == "Danil" && $password == "paww"){
+        if ($login == "kokanov.av" && $password == "123456789"){
             $bool = true;
             header('Location: ..\users\admin.php');
         }

@@ -1,7 +1,7 @@
 <?php    
-    $servername = "10.0.138.5";
+    $servername = "192.168.131.152";
     $username = "root";
-    $password = "";
+    $password = "root";
     $db = "loggins";
     $connect = mysqli_connect($servername, $username, $password, $db);
     $connect->set_charset("utf8");
