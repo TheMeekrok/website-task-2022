@@ -1,0 +1,100 @@
+th, td{
+    
+    padding: 10px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+th{
+    background: #e97777;
+
+}
+td{
+    background: #7dbde2;
+}
+
+table{
+    display: flex;
+    justify-content: center;
+}
+p{
+    margin-right: 20px;
+    display: flex;
+
+    justify-content: center;
+    
+}
+titlee{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+description {
+    margin-right: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.add_but{
+    position: relative;
+    left: 47%;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+
+}
+
+.sing_but{
+
+    position: relative;
+    left: 45%;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #8551af 0%, #63da9e 51%, #f16fdc 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+
+}
+
+.register_but{
+
+    position: relative;
+    left: 44.5%;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #f08630 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
+
+.sout_but{
+
+    position: relative;
+    left: 47%;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #cb18d1 0%, #ce0606 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
+
