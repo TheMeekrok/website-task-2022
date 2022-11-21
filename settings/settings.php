@@ -1,8 +1,8 @@
 <?php
     // Подключение к базе данных
-    $host = "192.168.0.12";
+    $host = "192.168.0.102";
     $user = "root";
-    $password = "";
+    $password = "root";
     $db = "online_shop";
     $connect = mysqli_connect($host, $user, $password, $db);
 
