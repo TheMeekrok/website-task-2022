@@ -31,6 +31,7 @@
             
             <form action = "vendor\sing.php" method="post">
 
+
                 <div class="sign_input_pass">
                     <input class="sign_input" type="text" name="login" placeholder="Введите логин">
                 </div>
@@ -49,8 +50,6 @@
             </form> 
     </div>
    
-
-
 </body>
 </html>
 

@@ -12,30 +12,43 @@
     
 </head>
 
-<body>
-    
-    <h1>Register username</h1>
-    <form action = "create_users\register.php" method="post">
-        <titlee>
-            <p>Login</p>
-            <input type="text" name="login">
-        </titlee>
-        
-        <description>
-            <p>Password</p>
-            <input type="text" name="password">
-        </description>
+    <div class="sing_place">
 
-        <br>
-        <button class ="add_but" type="submit">Register</button>
-    </form>
+        <div class="sign_win">
 
-    <br>
+            <div class="dack_but_place">
 
-    <form action = "users\guess.php" method="post">
-        <button  class ="sout_but" type="submit">Back</button>
-    </form>
+                <form action = "users\guess.php" method="post">
+                    <button class="dack_but" type="submit"></button>
+                </form>
 
+                <div class="title_sign_win_place">
+                    <h1 id="title_sign_win">Регистрация</h1>
+                </div>
+
+            </div>
+            
+            <form action = "create_users\register.php" method="post">
+
+                <div class="sign_input_pass">
+                    <input class="sign_input" type="text" name="login" placeholder="Введите логин">
+                </div>
+
+                <div class="sign_input_login">
+                    <input class="sign_input" type="password" name="password" placeholder="Введите пароль">
+                </div>
+
+
+                <div class="sign_buts">
+                
+                <div class="sign_but_aign">
+                    <button class ="add_but"  type="submit">Зарегистрироваться</button>
+                </div>
+
+            </form> 
+    </div>
+   
+</body>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
     // Подключение к базе данных
-    $host = "192.168.0.12";
+    $host = "10.0.138.5";
     $user = "root";
     $password = "";
     $db = "online_shop";

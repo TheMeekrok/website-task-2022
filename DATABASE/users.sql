@@ -2,8 +2,8 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Хост: 192.168.0.12:3307
--- Время создания: Ноя 20 2022 г., 20:47
+-- Хост: 10.0.138.5:3306
+-- Время создания: Ноя 24 2022 г., 15:05
 -- Версия сервера: 8.0.30
 -- Версия PHP: 7.2.34
 
@@ -28,10 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `users` (
-  `user_id` int NOT NULL,
-  `login` int DEFAULT NULL,
-  `password` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+  `id` int NOT NULL,
+  `users` varchar(30) DEFAULT NULL,
+  `password` varchar(30) DEFAULT NULL,
+  `privilege` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Индексы сохранённых таблиц
@@ -41,7 +42,7 @@ CREATE TABLE `users` (
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`user_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT для сохранённых таблиц
@@ -51,7 +52,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

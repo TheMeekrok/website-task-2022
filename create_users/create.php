@@ -8,7 +8,7 @@ if (empty($login) || empty($password) || strlen($login) > 30 || strlen($password
     
 }
 else{
-    mysqli_query($connect, "INSERT INTO `loggins` (`id`, `login`, `password`) VALUES (NULL, '$login', '$password');");
+    mysqli_query($connect, "INSERT INTO `users` (`id`, `users`, `password`, `privilege`) VALUES (NULL, '$login', '$password', NULL);");
 }
 
 
