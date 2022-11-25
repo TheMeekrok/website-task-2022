@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 5pt;
+    padding: 5pt;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 32pt;
+    font-weight: 600;
+    color: #000000;
+}
+
+h3 {
+    font-size: 15pt;
+    font-weight: 500;
+    color: #000000;
+}
+
+h4 {
+    font-size: 12pt;
+    font-weight: 300;
+    color: #000000;
+}
+
+.container-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
