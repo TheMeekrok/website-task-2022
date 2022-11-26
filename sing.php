@@ -23,6 +23,11 @@
                 </div>
             </div>
             <form action = "vendor\sing.php" method="post">
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 48c3f93ade5ef62489a09653575b462c746d4b92
                 <div class="sign_input_pass">
                     <input class="sign_input" type="text" name="login" placeholder="Введите логин">
                 </div>
@@ -38,6 +43,10 @@
                 </div>
             </form> 
     </div>
+<<<<<<< HEAD
+   
+=======
+>>>>>>> 48c3f93ade5ef62489a09653575b462c746d4b92
 </body>
 </html>
 

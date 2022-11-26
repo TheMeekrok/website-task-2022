@@ -2,7 +2,7 @@
     require_once ".\settings\settings.php";
 
     $id = $_GET['id'];
-    $users = mysqli_query($connect, "SELECT * FROM `loggins` WHERE `id` = '$id'");
+    $users = mysqli_query($connect, "SELECT * FROM `users` WHERE `id` = '$id'");
     $users = mysqli_fetch_assoc($users);
     ?>
 
@@ -21,7 +21,7 @@
             <input type ="text" name="id" value="<?=$id?>" style="display:none">
             <titlee>
             <p>Login</p>
-            <input type="text" name="login"  value="<?=$users['login']?>">
+            <input type="text" name="login"  value="<?=$users['users']?>">
             </titlee>
             <description>
             <p>Password</p>

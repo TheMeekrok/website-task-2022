@@ -21,7 +21,7 @@
 
         </tr>
         <?php
-            $users = mysqli_query($connect, "SELECT * FROM `loggins`");
+            $users = mysqli_query($connect, "SELECT * FROM `users`");
             $users = mysqli_fetch_all($users);
             foreach ($users as $loggins){
                 ?>
