@@ -11,6 +11,7 @@
 .sign_input_login {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .sign_input_pass {
@@ -90,7 +91,6 @@
     height: 30px;
     cursor: pointer;
     border: 0;
-    background-color: white;
     border-radius: 5px;
     opacity: 0.2;
     transition: .5s;
@@ -119,4 +119,22 @@
 
 .dack_but:hover {
     opacity: 1;
+}
+
+.password {
+    position: relative;
+}
+.password-control {
+    cursor: pointer;
+    transition: .5s;
+	position: absolute;
+	top: 35%;
+	right: 15%;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+    opacity: 0.2;
+}
+.password-control:hover {
+    opacity: 1; 
 }
