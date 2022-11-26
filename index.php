@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
     <?php
-    include './content/components/head.php';
+    require './content/components/head.php';
     ?>
 <body>
     <?php
-    include './content/components/nav.php';
-    $id = $_GET['id'];
-    echo($id);
-    ?>
-    <h1>Лучший интернет-магазин одежды</h1>
-    <h3>content</h3>
-    <h3>content</h3>
-    <h3>content</h3>
-    <h3>content</h3>
-    <h3>content</h3>
-    <h3>content</h3>
-    <h3>content</h3>
-    <h3>content</h3>
-    <h3>content</h3>
-    <h3>content</h3>
-    <h3>content</h3>
-    <h3>content</h3>
-    <h3>content</h3>
-    <h3>content</h3>
-    <h3>content</h3>
-    <h3>content</h3>
-    <?php
-    include './content/components/footer.php';
+    require './content/components/nav.php';
+    $page = $_GET['page'];
+
+    $pages = ['catalog', 'contacts', 'cart', 'profile'];
+    $path;
+    $error;
+
+    if (!$page) {
+        $path =  './content/pages/home.php';
+    } 
+    else if (in_array($page, $pages)) {
+        $path = './content/pages/' . $page . '.php';
+    }
+    else {
+        $path = './content/pages/not_found.php';
+        $error = 404;
+    }
+
+    require($path);
+    
+    if (!$error)
+        require './content/components/footer.php';
     ?>
 </body>
 </html>
