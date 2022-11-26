@@ -1,10 +1,15 @@
 <nav class="container-flex">
     <div class="container-flex">
         <div class="container-flex nav-block" onclick="route()">
+        <a href="../index.php?id=Get">
+        <div>
             <img class="logo" src="./content/images/favicon.svg">
             <h3 class="nav-text">
                 Family Shop
             </h3>
+         
+        </div> 
+        </a>   
         </div>
         <div class="container-flex nav-block" id="catalog">
             <h4 class="nav-text">

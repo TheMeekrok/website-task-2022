@@ -6,6 +6,8 @@
 <body>
     <?php
     include './content/components/nav.php';
+    $id = $_GET['id'];
+    echo($id);
     ?>
     <h1>Лучший интернет-магазин одежды</h1>
     <h3>content</h3>
