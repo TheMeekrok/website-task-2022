@@ -8,6 +8,7 @@ nav {
 
 .nav-block {
     height: 65px;
+    transition: .5s;
 }
 
 .nav-block:hover {
