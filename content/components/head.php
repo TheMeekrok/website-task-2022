@@ -16,7 +16,7 @@
 
     <!-- Импорт стилей -->
     <link rel="stylesheet" href="./content/styles/main.css">
-    <link rel="stylesheet" href="./content/styles/nav.css">
+    <link rel="stylesheet" href="./content/styles/header.css">
     <link rel="stylesheet" href="./content/styles/footer.css">
     <link rel="stylesheet" href="./content/styles/auth.css">
 </head>

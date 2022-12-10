@@ -1,4 +1,8 @@
-<nav class="container-flex">
+<?php
+session_start();
+?>
+
+<header class="container-flex">
     <div class="container-flex">
         <a class="container-flex nav-block" href="../index.php">
             <img class="logo" src="./content/images/favicon.svg">
@@ -24,14 +28,24 @@
                 Корзина
             </h4>
         </a>
+    <?php if (isset($_SESSION['login'])) { ?>
         <a class="container-flex nav-block" href="../index.php?page=profile" id="authButton">
+            <h4 class="nav-text">
+                <img class="icon" src="./content/images/nav/user.svg">
+                Профиль
+            </h4>
+        </a>
+    <?php }
+        else { ?>
+        <div class="container-flex nav-block" id="authButton">
             <h4 class="nav-text">
                 <img class="icon" src="./content/images/nav/user.svg">
                 Войти
             </h4>
-        </a>
+        </div>
+    <?php } ?>
     </div>
-</nav>
+</header>
 
 <!-- Окно авторизации -->
 <div class="nav-block" id="navigation">
@@ -48,7 +62,6 @@
                 <div class="container-flex">
                     <input class="user-input" type="password" placeholder="Введите пароль">
                 </div>
-
                 <div class="container-flex">
                     <button class="button proceed-button bottom" type="submit">Войти</button>
                 </div>
@@ -58,4 +71,7 @@
     </div>
 </div>
 
+<?php
+var_dump($_SESSION);
+?>
 

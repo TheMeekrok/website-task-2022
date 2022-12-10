@@ -1,4 +1,4 @@
-nav {
+header {
     position: fixed;
     top: 0%;
     background-color: #FF8B00;
@@ -9,6 +9,10 @@ nav {
 .nav-block {
     height: 65px;
     transition: .5s;
+}
+
+#authButton {
+    cursor: pointer;
 }
 
 .nav-block:hover {

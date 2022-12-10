@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
     <?php
-    require './content/components/head.html';
+    require './content/components/head.php';
     ?>
 <body>
     <?php
-    // require './content/components/auth.html';
 
-    require './content/components/nav.html';
+    $page_format = '.php';
+    require './content/components/header'.$page_format;
     $page = $_GET['page'];
 
-    $pages = ['catalog', 'contacts', 'cart', 'profile'];
+    $pages = ['catalog', 'contacts', 'cart', 'profile', 'register'];
     $path; $error;
 
     if (!$page) {
-        $path =  './content/pages/home.html';
+        $path =  './content/pages/home'.$page_format;
     } 
     else if (in_array($page, $pages)) {
-        $path = './content/pages/' . $page . '.html';
+        $path = './content/pages/'.$page.$page_format;
     }
     else {
-        $path = './content/pages/not_found.html';
+        $path = './content/pages/not_found'.$page_format;
         $error = 404;
     }
 
     require($path);
     
     if (!$error)
-        require './content/components/footer.html';
+        require './content/components/footer'.$page_format;
     ?>
 </body>
 </html>
