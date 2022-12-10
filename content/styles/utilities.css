@@ -1,0 +1,42 @@
+.container-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.wrapper {
+    height: 100%;
+    width: 70%;
+    margin: auto;
+}
+
+.wrapper-25 {
+    height: 100%;
+    width: 25%;
+}
+
+.__space-10 {
+    height: 10px;
+}
+
+.__space-40 {
+    height: 40px;
+}
+
+.__margin-top-bot-50 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none; 
+       -khtml-user-select: none; 
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}

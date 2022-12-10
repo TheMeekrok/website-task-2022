@@ -8,6 +8,7 @@ header {
 
 .nav-block {
     height: 65px;
+    width: 100%;
     transition: .5s;
 }
 

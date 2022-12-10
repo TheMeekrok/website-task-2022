@@ -1,39 +1,36 @@
-<!DOCTYPE html>
-<html lang='ru'>
-
-<head>
-    <meta charset='utf-8'>
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>test web</title>
-    
-</head>
-
-<body>
-    
-    <h1>Register username</h1>
-    <form action = "create_users\register.php" method="post">
-        <titlee>
-            <p>Login</p>
-            <input type="text" name="login">
-        </titlee>
-        
-        <description>
-            <p>Password</p>
-            <input type="text" name="password">
-        </description>
-
-        <br>
-        <button class ="add_but" type="submit">Register</button>
-    </form>
-
-    <br>
-
-    <form action = "users\guess.php" method="post">
-        <button  class ="sout_but" type="submit">Back</button>
-    </form>
-
-
-</body>
-</html>
+<div class="wrapper">
+    <div><h1>Регистрация</h1></div>
+    <div class="wrapper-25 container-flex">
+        <form>
+            <div class="__margin-top-bot-50">
+                <h4>Логин</h4>
+                <input class="user-input" id="loginRegInput" 
+                    type="text" placeholder="guzev1331" maxlength="16">
+                <h6>3-16 знаков, без специальных знаков, и спец. символов</h6>
+            </div>
+            <div class="__space-10"></div>
+            <div class="__margin-top-bot-50">
+                <h4>Пароль:</h4>
+                <input class="user-input" id="firstPasswordRegInput" 
+                    type="password" placeholder="safe_password" maxlength="16">
+                <h6>3-16 знаков, без специальных знаков, и спец. символов</h6>
+            </div>
+            <div class="__margin-top-bot-50">
+                <h4>Повторите пароль:</h4>
+                <input class="user-input" id="secondPasswordRegInput"
+                    type="password" placeholder="safe_password" maxlength="16">
+                <h6>3-16 знаков, без специальных знаков, и спец. символов</h6>
+            </div>
+            <div class="__space-40"></div>
+            <div class="container-flex">
+                <button class="button proceed-button" type="submit">Зарегистрироваться</button>
+            </div>
+            <div class="container-flex __margin-top-bot-50">
+                <h5 class="text-center">Нажимая Зарегистрироваться, вы принимаете условия <a href="../index.php?page=register">Политики конфиденциальности</a></h5>
+            </div>
+        </form> 
+    </div>
+    <div class="__space-40"></div>
+</div>
 
 

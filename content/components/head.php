@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <script src="./content/scripts/auth.js"></script>
+    <script src="./content/scripts/checkForm.js"></script>
 
     <!-- Импорт шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
@@ -19,4 +20,5 @@
     <link rel="stylesheet" href="./content/styles/header.css">
     <link rel="stylesheet" href="./content/styles/footer.css">
     <link rel="stylesheet" href="./content/styles/auth.css">
+    <link rel="stylesheet" href="./content/styles/utilities.css">
 </head>

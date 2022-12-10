@@ -1,10 +1,6 @@
 $(document).ready(() => {
-    init();
-});
+    const fadeDuration = 500;
 
-const fadeDuration = 500;
-
-const init = () => {
     $('#modalWindow').hide();
 
     $('#modalWindowBackgr').click(() => { 
@@ -16,11 +12,4 @@ const init = () => {
     $('#authButton').click(() => { 
         $('#modalWindow').fadeIn();
     });
-}
-
-
-
-const toggleModalWindow = () => {
-    $('#modalWindow').fadeToggle();
-}
-
+});
