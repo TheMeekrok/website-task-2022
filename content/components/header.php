@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <header class="container-flex">
-    <div class="container-flex">
+    <div class="wrapper container-flex">
         <a class="container-flex nav-block" href="../index.php">
             <img class="logo" src="./content/images/favicon.svg">
             <h3 class="nav-text">
@@ -50,22 +50,29 @@ session_start();
 <!-- Окно авторизации -->
 <div class="nav-block" id="navigation">
     <div class="fullscreen-fixed container-flex no-select" id="modalWindow">
-        <div class="modal-window">
-            <h2 class="modal-title container-flex">
-                Авторизация
-                <button type="submit" class="button close-button container-flex" id="modalWindowClose"><img src="./content/images/nav/close.svg"></button>
-            </h2>
-            <form>
-                <div class="container-flex">
-                    <input class="user-input" type="text" placeholder="Введите логин">
-                </div>
-                <div class="container-flex">
-                    <input class="user-input" type="password" placeholder="Введите пароль">
-                </div>
-                <div class="container-flex">
-                    <button class="button proceed-button bottom" type="submit">Войти</button>
-                </div>
-            </form> 
+        <div class="modal-window container-flex">
+            <div class="modal-wrapper">
+                <h2 class="modal-title container-flex">
+                    Авторизация
+                    <button type="submit" class="button close-button container-flex" id="modalWindowClose"><img src="./content/images/nav/close.svg"></button>
+                </h2>
+                <div class="__space-40"></div>
+                <form>
+                    <div class="container-flex __margin-top-bot-50">
+                        <input class="user-input" type="text" placeholder="Введите логин">
+                    </div>
+                    <div class="container-flex __margin-top-bot-50">
+                        <input class="user-input" type="password" placeholder="Введите пароль">
+                    </div>
+                    <div class="__space-40"></div>
+                    <div class="container-flex">
+                        <button class="button proceed-button" type="submit">Войти</button>
+                    </div>
+                    <div class="container-flex __margin-top-bot-50">
+                        <h5 class="text-center">Еще не зарегистрированы? <a href="../index.php?page=register">Зарегистрироваться</a></h5>
+                    </div>
+                </form> 
+            </div>
         </div>
         <div class="background fullscreen-fixed" id="modalWindowBackgr"></div>
     </div>
