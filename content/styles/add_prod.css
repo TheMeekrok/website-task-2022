@@ -1,0 +1,55 @@
+th, td{
+    
+    padding: 10px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+th{
+    background: #FF8B00;
+
+}
+td{
+    background: #3C9DD0;
+}
+
+table{
+    display: flex;
+    justify-content: center;
+}
+p{
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.indent{
+    margin-right: 5px;
+}
+
+description{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.add_but{
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+
+}
+
+
+
+
+

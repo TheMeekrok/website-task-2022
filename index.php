@@ -2,6 +2,8 @@
 <html lang="ru">
     <?php
     require './content/components/head.php';
+    require_once './settings/settings.php';
+
     ?>
 <body>
     <?php
