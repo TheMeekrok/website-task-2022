@@ -1,4 +1,7 @@
 footer {
+    position: relative;
+    bottom: 0px;
     height: 100px;
-    background-color: #A65A00;
+    /* width: 100%; */ 
+    /* background-color: #A65A00; */
 }

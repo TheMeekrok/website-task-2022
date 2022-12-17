@@ -1,3 +1,3 @@
 <footer class="container-flex">
-    <h1>Футер сука</h1>
+    <h1>Футер</h1>
 </footer>

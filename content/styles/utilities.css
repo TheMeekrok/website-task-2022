@@ -4,6 +4,10 @@
     justify-content: space-around;
 }
 
+.__relative {
+    position: relative;
+}
+
 .wrapper {
     height: 100%;
     width: 70%;

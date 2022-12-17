@@ -10,7 +10,6 @@
 <body>
     <table>
         <tr>
-
             <th>id</th>
             <th>title</th>
             <th>price</th>
@@ -18,12 +17,11 @@
             <th>image</th>
             <th>raiting</th>
             <th>count</th>
-
         </tr>
         <?php
             $products = mysqli_query($connect, "SELECT * FROM `products`");
             $products = mysqli_fetch_all($products);
-            foreach ($products as $prod){
+            foreach ($products as $prod) {
                 ?>
                 <tr>
                     <td><?= $prod[0] ?></td>

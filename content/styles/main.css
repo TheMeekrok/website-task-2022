@@ -1,6 +1,9 @@
 body {
     margin: 0;
     padding: 0;
+    /* position: relative;
+    height: 100vh;
+    width: 100vw; */
 }
 
 h1,
@@ -31,7 +34,11 @@ h3 {
 }
 
 h4 {
-    font-weight: 500;
+    font-weight: lighter;
+    color: #000000;
+}
+
+h5 {
     color: #000000;
 }
 
