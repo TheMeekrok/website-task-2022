@@ -3,14 +3,10 @@ $(document).ready(() => {
     $('.user-input').on('input', function() {
         text = $(this).val();
 
-        if (!validateText(text)) {
-            $('.proceed-button').prop('disabled', true);
+        if (!validateText(text)) 
             $(this).addClass('__wrong-input');
-        }
-        else  {
-            $('.proceed-button').prop('disabled', false);
-            $(this).removeClass('__wrong-input');
-        }
+        else 
+           $(this).removeClass('__wrong-input');
     });
 });
 

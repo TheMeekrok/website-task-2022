@@ -16,7 +16,4 @@
     <h3>content</h3>
     <h3>content</h3>
     <h3>content</h3>
-    <?php
-    require './content/components/footer.php';
-    ?>
 </div>

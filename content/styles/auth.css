@@ -4,7 +4,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 101;
 }
 
 .modal-window {
@@ -15,7 +14,6 @@
     /* height: 30%; width: 20%; */
     /* height: 364px; */
     background-color: #FFFFFF;
-    z-index: 102;
 }
 
 .background {
@@ -40,7 +38,7 @@
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 16px;
     width: 100%;
-    /* max-width: 250px; */
+    max-width: 250px;
     /* margin: 10px; */
 }
 
@@ -55,15 +53,6 @@
     border: 0;
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 16px;
-}
-
-button[disabled]{
-    cursor: default;
-    background-color: #cccccc;
-}
-
-button[disabled]:hover{
-    background-color: #cccccc;
 }
 
 .close-button {

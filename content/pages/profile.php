@@ -10,6 +10,7 @@
 <body>
     <table>
         <tr>
+
             <th>id</th>
             <th>title</th>
             <th>price</th>
@@ -17,11 +18,12 @@
             <th>image</th>
             <th>raiting</th>
             <th>count</th>
+
         </tr>
         <?php
             $products = mysqli_query($connect, "SELECT * FROM `products`");
             $products = mysqli_fetch_all($products);
-            foreach ($products as $prod) {
+            foreach ($products as $prod){
                 ?>
                 <tr>
                     <td><?= $prod[0] ?></td>
@@ -31,6 +33,8 @@
                     <td><?= $prod[4] ?></td>
                     <td><?= $prod[5] ?></td>
                     <td><?= $prod[6] ?></td>
+                    <td><a style="color:cyan"; href=".\content\data processing\update.php?id=<?= $prod[0] ?>">Update</td>
+                    <td><a style="color:red"; href=".\content\vendor\delete_prod.php?id=<?= $prod[0] ?>">Delete</td>
                 </tr>
             <?php
             }
