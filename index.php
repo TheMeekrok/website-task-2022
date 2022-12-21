@@ -25,9 +25,11 @@
         $path = './content/pages/not_found'.$page_format;
         $error = 404;
     }
+    ?>
 
-    require($path);
+    <div class="wrapper content-flex"><?php require($path); ?></div>
     
+    <?php
     if (!$error)
         require './content/components/footer'.$page_format;
     ?>
