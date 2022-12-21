@@ -24,6 +24,8 @@ require_once "..\..\settings\settings.php";
             <description>
             <p>title</p>
             <input class = "indent" type="text" name="title" value="<?=$prod['title']?>">
+            <p>category</p>
+            <input class = "indent" type="text" name="category" value="<?=$prod['category']?>">
             <p>price</p>
             <input class = "indent" type="text" name="price" value="<?=$prod['price']?>">
             <p>description</p>

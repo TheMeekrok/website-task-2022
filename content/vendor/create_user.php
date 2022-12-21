@@ -5,8 +5,8 @@ require_once "..\..\settings\settings.php";
 
 
 $login = $_POST['login'];
-$password = $_POST['password'];
-$password_r = $_POST['password_repeat'];
+$password = hash('sha256', $_POST['password']);
+$password_r = hash('sha256', $_POST['password_repeat']);
 
 
 
