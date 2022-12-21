@@ -23,4 +23,5 @@
     <link rel="stylesheet" href="./content/styles/utilities.css">
     <link rel="stylesheet" href="./content/styles/product.css">
     <link rel="stylesheet" href="./content/styles/add_prod.css">
+    <link rel="stylesheet" href="./content/styles/tables.css">
 </head>

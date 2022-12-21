@@ -1,0 +1,16 @@
+table{
+    /* display: flex;
+    justify-content: center; */
+}
+
+th, td{
+    padding: 10px;
+}
+
+.admin-products-th{
+    background: #FFA840;
+}
+
+.admin-products-td{
+    background: #FFBF73;
+}

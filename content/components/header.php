@@ -25,7 +25,7 @@
             </h4>
         </a>
     <?php if (isset($_SESSION['login'])) { ?>
-        <a class="container-flex nav-block" href="../index.php?page=profile" id="authButton">
+        <a class="container-flex nav-block" href="../index.php?page=profile">
             <h4 class="nav-text">
                 <img class="icon" src="./content/images/nav/user.svg">
                 Профиль
@@ -73,7 +73,3 @@
         <div class="background fullscreen-fixed" id="modalWindowBackgr"></div>
     </div>
 </div>
-
-<?php
-print_r($_SESSION);
-?>
