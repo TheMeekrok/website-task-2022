@@ -33,7 +33,7 @@
                     <td><?= $prod[4] ?></td>
                     <td><?= $prod[5] ?></td>
                     <td><?= $prod[6] ?></td>
-                    <td><a style="color:cyan"; href=".\content\data processing\update.php?id=<?= $prod[0] ?>">Update</td>
+                    <td><a style="color:cyan"; href=".\content\data_processing\update.php?id=<?= $prod[0] ?>">Update</td>
                     <td><a style="color:red"; href=".\content\vendor\delete_prod.php?id=<?= $prod[0] ?>">Delete</td>
                 </tr>
             <?php
@@ -57,9 +57,13 @@
             <input class = "indent" type="text" name="count">
         </description>
         <br>
-        <button class ="add_but" type="submit">Add new prod</button>
+        <button class ="add_but" type="submit">Добавить новый продукт</button>
     </form>
-    <br>
+    <br>   
+    <form action = ".\content\data_processing\sign_out.php">
+        <button class = "sign_out_but" type="submit">Выход</button>
+        </form>
+    <br>   
 
 
 

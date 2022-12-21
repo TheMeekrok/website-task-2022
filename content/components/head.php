@@ -21,4 +21,6 @@
     <link rel="stylesheet" href="./content/styles/footer.css">
     <link rel="stylesheet" href="./content/styles/auth.css">
     <link rel="stylesheet" href="./content/styles/utilities.css">
+    <link rel="stylesheet" href="./content/styles/product.css">
+
 </head>

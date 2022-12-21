@@ -27,6 +27,9 @@
     }
 
     require($path);
+    
+    if (!$error)
+        require './content/components/footer'.$page_format;
     ?>
 </body>
 </html>

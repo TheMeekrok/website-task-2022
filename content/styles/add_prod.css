@@ -36,9 +36,10 @@ description{
 }
 
 .add_but{
-    display: flex;
-    justify-content: center;
+    position: relative;
+    left: 43%;
     color: white;
+    padding: 20px 30px;
     padding: 20px 30px;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -49,7 +50,19 @@ description{
 
 }
 
-
+.sign_out_but{
+    position: relative;
+    left: 47%;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #cb18d1 0%, #ce0606 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
 
 
 

@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 
 <header class="container-flex">
     <div class="wrapper container-flex">
@@ -57,12 +55,12 @@ session_start();
                     <button type="submit" class="button close-button container-flex" id="modalWindowClose"><img src="./content/images/nav/close.svg"></button>
                 </h2>
                 <div class="__space-40"></div>
-                <form>
+                <form action = "./content/data_processing/sign_in.php"  method="post">
                     <div class="container-flex __margin-top-bot-50">
-                        <input class="user-input" type="text" placeholder="Введите логин">
+                        <input class="user-input" type="text" placeholder="Введите логин" name = "login" >
                     </div>
                     <div class="container-flex __margin-top-bot-50">
-                        <input class="user-input" type="password" placeholder="Введите пароль">
+                        <input class="user-input" type="password" placeholder="Введите пароль" name = "password">
                     </div>
                     <div class="__space-40"></div>
                     <div class="container-flex">
@@ -79,6 +77,5 @@ session_start();
 </div>
 
 <?php
-var_dump($_SESSION);
+print_r($_SESSION);
 ?>
-
