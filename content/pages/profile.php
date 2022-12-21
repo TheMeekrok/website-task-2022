@@ -13,6 +13,7 @@
 
             <th>id</th>
             <th>title</th>
+            <th>category</th>
             <th>price</th>
             <th>description</th>
             <th>image</th>
@@ -28,6 +29,7 @@
                 <tr>
                     <td><?= $prod[0] ?></td>
                     <td><?= $prod[1] ?></td>
+                    <td><?= $prod[7] ?></td>
                     <td><?= $prod[2] ?></td>    
                     <td><?= $prod[3] ?></td>
                     <td><?= $prod[4] ?></td>
@@ -45,6 +47,8 @@
         <description>
             <p>title</p>
             <input class = "indent" type="text" name="title">
+            <p>category</p>
+            <input class = "indent" type="text" name="category">
             <p>price</p>
             <input class = "indent" type="text" name="price">
             <p>description</p>
