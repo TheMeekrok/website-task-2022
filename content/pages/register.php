@@ -1,7 +1,7 @@
 <div class="__space-40"></div>
 <div><h1>Регистрация</h1></div>
 <div class="wrapper-25 container-flex">
-    <form action = "/content/vendor/create_user.php" method="post">
+    <form action = "\content\scripts\php\register_user\create_user.php" method="post">
         <div class="__margin-top-bot-50">
             <h4>Логин</h4>
             <input class="user-input" id="loginRegInput" 
