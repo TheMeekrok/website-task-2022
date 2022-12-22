@@ -34,7 +34,8 @@
     
     <?php
     if (!$error)
-        require './content/components/footer'.$page_format;
+        // WIP
+        // require './content/components/footer'.$page_format;
     ?>
 </body>
 </html>

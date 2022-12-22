@@ -2,6 +2,14 @@
 <h1>Корзина</h1>
 <div class="__space-10"></div>
 
+<?php
+$login = $_SESSION['login'];
+if (!$login) { ?>
+<div class="container-flex"><h2>Войдите, или <a href="index.php?page=register">зарегистрируйтесь</a>, чтобы совершать покупки.</h2></div>
+<?php 
+exit(-1);
+} ?>
+
 <style>
     .user-cart {
         justify-content: flex-start;
@@ -23,10 +31,13 @@
     .cart-item-title{
         font-weight: bold;
     }
+    .items-sum {
+        font-weight: bold;
+    }
     .delete-button {
-        width: 15px;
-        height: 15px;
-        padding: 5px;
+        width: 25px;
+        height: 25px;
+        margin: 5px;
     }
     .delete-button:hover {
         opacity: 1;
@@ -52,26 +63,37 @@
 </style>
 
 <div class="user-cart container-flex">
+    <?php
+    function cut_string($string, $max_symbols) {
+        if (strlen($string) > $max_symbols) {
+            $string = substr($string, 0, $max_symbols).'...';
+        }
+    
+        return $string;
+    }
+
+    $current_user = $_SESSION['id'];
+    $query = "SELECT * FROM `cart` JOIN `products` ON `products`.`id`=`cart`.`id_product` WHERE `cart`.`id_user`=$current_user;";
+
+    $products = mysqli_query($connect, $query);
+
+    $products = mysqli_fetch_all($products);
+
+    if (!$products) { ?>
+        <div class="container-flex"><h3>Пока здесь ничего нет</h3></div>
+    <?php    
+    } 
+
+    $images_directory = "./content/images/image_product/ ";
+
+    $items_sum = 0;
+    ?>
     <table class="order __cart-block">
         <?php
-        function cut_string($string, $max_symbols) {
-            if (strlen($string) > $max_symbols) {
-                $string = substr($string, 0, $max_symbols).'...';
-            }
-        
-            return $string;
-        }
-
-        $current_user = $_SESSION['id'];
-        $query = "SELECT * FROM `cart` JOIN `products` ON `products`.`id`=`cart`.`id_product` WHERE `cart`.`id_user`=$current_user;";
-
-        $products = mysqli_query($connect, $query);
-
-        $products = mysqli_fetch_all($products);
-
-        $images_directory = "./content/images/image_product/";
-
         foreach ($products as $prod){
+
+            // Подсчёт суммы заказа
+            $items_sum += $prod[6] * $prod[3];
             ?>
             <tr class="__cart-item-tr">
                 <!-- Изображение -->
@@ -88,6 +110,7 @@
                         <h4 class="cart-item-title"><?=cut_string($prod[6], 100)?>₽</h4>
                     </div>
                 </td>
+                <!-- Количество -->
                 <td>
                     <div class="container-flex flex-start __cart-item">
                         <h4 class="cart-item-title"><?=cut_string($prod[3], 100)?></h4>
@@ -98,8 +121,8 @@
                     <form action="./content/scripts/php/cart/delete_from_cart.php" method="post">
                         <input type ="text" name="id" value="<?=$prod[2]?>" style="display:none">
                         <div class="container-flex">
-                            <button class="button delete-button" type="submit">
-                                <img class="icon" src="./content/images/admin_panel/close.svg">
+                            <button type="submit" class="button delete-button container-flex">
+                                <img src="./content/images/nav/close.svg">
                             </button>
                         </div>
                     </form>
@@ -109,11 +132,19 @@
             }
         ?>
     </table>
+    <?php
+    if ($products) { ?>
     <div class="container-flex flex-start column order-detalis __cart-block">
-        <h2 class="text-center">Детали заказа</h2>
+        <h2 class="text-center">Проверьте Ваш заказ</h2>
         <div class="__space-40"></div>
-        <h4>(подсчитать)₽</h4>
-        <div class="container-flex"><button class="button proceed-button" type="submit">Оформить заказ</button></div>
+        <h4 class="items-sum"><?= $items_sum ?>₽</h4>
+        <form action="./content/scripts/php/cart/cart_checkout.php" method="post">
+            <div class="container-flex">
+                <button class="button proceed-button" type="submit">Оформить заказ</button>
+            </div>
+        </form>
     </div>
+    <?php
+    } ?>
 </div>
 <div class="__space-40"></div>

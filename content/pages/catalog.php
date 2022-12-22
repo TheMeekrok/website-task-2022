@@ -12,7 +12,7 @@ function cut_string($string, $max_symbols) {
     return $string;
 }
 
-$images_directory = "./content/images/image_product/";
+$images_directory = "./content/images/image_product/ ";
 
 foreach ($products as $prod) {
 

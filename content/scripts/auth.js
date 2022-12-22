@@ -1,4 +1,6 @@
 $(document).ready(() => {
+    $('#modalWindow').removeClass('disabled');
+
     const fadeDuration = 500;
 
     $('#modalWindow').hide();

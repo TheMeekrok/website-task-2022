@@ -45,29 +45,39 @@
 
 <!-- Окно авторизации -->
 <div class="nav-block" id="navigation">
-    <div class="fullscreen-fixed container-flex no-select" id="modalWindow">
+    <div class="fullscreen-fixed container-flex no-select disabled" id="modalWindow">
         <div class="modal-window container-flex">
-            <div class="modal-wrapper">
+            <div class="modal-wrapper container-flex column">
                 <h2 class="modal-title container-flex">
                     Авторизация
                     <button type="submit" class="button close-button container-flex" id="modalWindowClose"><img src="./content/images/nav/close.svg"></button>
                 </h2>
                 <div class="__space-40"></div>
-                <form action = "./content/data_processing/sign_in.php"  method="post">
-                    <div class="container-flex __margin-top-bot-50">
-                        <input class="user-input" type="text" placeholder="Введите логин" name = "login" >
-                    </div>
-                    <div class="container-flex __margin-top-bot-50">
-                        <input class="user-input" type="password" placeholder="Введите пароль" name = "password">
-                    </div>
+                <form enctype="multipart/form-data" action="./content/data_processing/sign_in.php" method="post">
+                    <table>
+                        <style>
+                            .sign-form-label-td {
+                                width: 40%;
+                            }
+                        </style>
+                        <tr>
+                            <td class="sign-form-label-td"><h4>Логин<br><h6>Который указывали при регистрации</h6></h4></td>
+                            <td><input class="user-input" type="text" name="login"></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Пароль</h4></td>
+                            <td><input class="user-input" type="password" name="password"></td>
+                        </tr>  
+                        <tr>
+                            <td><div></div></td>
+                        </tr>  
+                    </table>
+                    <div class="__space-10"></div>
+                    <div class="container-flex"><h5 class="text-center">Еще не зарегистрированы? <a href="../index.php?page=register">Зарегистрироваться</a></h5></div>
+                    <div class="__space-10"></div>
+                    <div class="container-flex"><button class="button proceed-button" type="submit">Войти</button></div>
                     <div class="__space-40"></div>
-                    <div class="container-flex">
-                        <button class="button proceed-button" type="submit">Войти</button>
-                    </div>
-                    <div class="container-flex __margin-top-bot-50">
-                        <h5 class="text-center">Еще не зарегистрированы? <a href="../index.php?page=register">Зарегистрироваться</a></h5>
-                    </div>
-                </form> 
+                </form>
             </div>
         </div>
         <div class="background fullscreen-fixed" id="modalWindowBackgr"></div>

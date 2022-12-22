@@ -9,7 +9,6 @@
 }
 </style>
 
-<div class="__space-40"></div>
 <div>
     <h1>Управление</h1>
     <div class="__space-10"></div>
@@ -77,10 +76,10 @@
                 </tr>
                 <tr>
                     <td><h4>Описание<br><h6>не более 1000 символов</h6></h4></td>
-                    <td><textarea class="user-input" type="text" name="description"></textarea></td>
+                    <td><textarea rows="4" class="user-input" type="text" name="description"></textarea></td>
                 </tr>
                 <tr>
-                    <td><h4>  Отправить изображение:</h4></td>
+                    <td><h4>Изображение<br><h6>.jpg .png</h6></h4></td>
                     <td><input name="userfile" type="file"/></td>
                 </tr>
                 <tr>
