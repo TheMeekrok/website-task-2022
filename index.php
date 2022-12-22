@@ -12,7 +12,6 @@
     $page_format = '.php';
 
     require './content/components/header'.$page_format;
-    // print_r($_SESSION['login']);
 
     $page = $_GET['page'];
 

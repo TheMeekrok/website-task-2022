@@ -36,6 +36,10 @@
     justify-content: flex-start;
 }
 
+.column {
+    flex-flow: column;
+}
+
 .no-select {
     -webkit-touch-callout: none;
       -webkit-user-select: none; 

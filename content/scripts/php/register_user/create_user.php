@@ -9,7 +9,6 @@ $password = hash('sha256', $_POST['password']);
 $password_r = hash('sha256', $_POST['password_repeat']);
 
 
-
 if ($password != $password_r){
     header('Location: ..\..\index.php?page=register');
 }
@@ -18,7 +17,5 @@ else{
 
     header('Location: ..\..\..\..\index.php');
 }
-
-
 
 ?>
