@@ -2,6 +2,8 @@
 <h1>Профиль    <h5><a href="./content/scripts/php/sign_out.php">Выход</a></h5></h1>
 
 <?php
+require('./content/pages/profile_user_info.php');
+
 $login = $_SESSION['login'];
 if (!$login) die(404);
 
