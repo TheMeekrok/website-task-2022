@@ -10,10 +10,7 @@ $rating = $_POST['raiting'];
 $count = $_POST['count'];
 $category = $_POST['category'];
 
-
-
 mysqli_query($connect, "UPDATE `products` SET `title` = '$title', `price` = '$price', `description` = '$description', `image` = '$image', `rating` = '$rating', `count` = '$count', `category` = '$category' WHERE `products`.`id` = '$id'");
 
 header('Location: ../../../../../index.php?page=profile');
 ?>
-
