@@ -60,8 +60,8 @@
     <div class="__space-40"></div>
     <h2>Добавление товара</h2>
     <div class="__space-10"></div>
-    <div class="container-flex flex-start">
-        <form action="./content/scripts/php/admin/add_product.php" method="post">
+    <div class="container-flex admin-products-form">
+        <form enctype="multipart/form-data" action="./content/scripts/php/admin/add_product.php" method="post">
             <table>
                 <tr>
                     <td><h4>Имя<br><h6>Полное наименование</h6></h4></td>
@@ -80,12 +80,12 @@
                     <td><textarea class="user-input" type="text" name="description"></textarea></td>
                 </tr>
                 <tr>
-                    <td><h4>Ссылка на изображение</h4></td>
-                    <td><textarea class="user-input" type="text" name="image"></textarea></td>
+                    <td><h4>  Отправить изображение:</h4></td>
+                    <td><input name="userfile" type="file"/></td>
                 </tr>
                 <tr>
                     <td><h4>Оценка</h4></td>
-                    <td><input class="user-input" type="text" name="raiting"></td>
+                    <td><input class="user-input" type="text" name="rating"></td>
                 </tr>
                 <tr>
                     <td><h4>Количество</h4></td>
