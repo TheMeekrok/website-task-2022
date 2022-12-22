@@ -12,7 +12,7 @@
     require './content/components/header'.$page_format;
     $page = $_GET['page'];
 
-    $pages = ['catalog', 'contacts', 'cart', 'profile', 'register'];
+    $pages = ['catalog', 'contacts', 'cart', 'profile', 'register', 'profile_user_info'];
     $path; $error;
 
     if (!$page) {
