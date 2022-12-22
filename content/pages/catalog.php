@@ -29,7 +29,10 @@ foreach ($products as $prod) {
     </div>
     <div class="container-flex product-button-sect __product-block">
         <h4 class="product-price"><?= $prod[2] ?>₽</h4>
-        <button class="button add-to-cart-button" type="submit">В корзину</button>
+        <form class="button add-to-cart-button" action = ".\content\scripts\php\add_in_cart.php" method="post">
+            <input type ="text" name="id" value = "<?=$prod[0]?>" style="display:none">
+            <button  class="button add-to-cart-button" type="submit">В корзину</button>
+        </form>
     </div>
 </div>
 <?php } ?>
