@@ -8,7 +8,7 @@
 <h1>Изменить товар</h1>
 <div class="__space-10"></div>
 <div class="container-flex admin-products-form">
-    <form action="./content/scripts/php/update_product/update_product.php" method="post">
+    <form  enctype="multipart/form-data" action="./content/scripts/php/admin/change_product.php" method="post">
         <input type ="text" name="id" value="<?=$id?>" style="display:none">
         <table>
             <tr>
@@ -25,11 +25,11 @@
             </tr>
             <tr>
                 <td><h4>Описание<br><h6>не более 1000 символов</h6></h4></td>
-                <td><textarea class="user-input" type="text" name="description"></textarea></td>
+                <td><textarea class="user-input" type="text" name="description" ></textarea></td>
             </tr>
             <tr>
-                <td><h4>Ссылка на изображение</h4></td>
-                <td><textarea class="user-input" type="text" name="image"></textarea></td>
+                    <td><h4>  Отправить изображение:</h4></td>
+                    <td><input name="userfile" type="file"/></td>
             </tr>
             <tr>
                 <td><h4>Оценка</h4></td>

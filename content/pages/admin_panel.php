@@ -50,7 +50,7 @@
     <h2>Добавление товара</h2>
     <div class="__space-10"></div>
     <div class="container-flex admin-products-form">
-        <form action="./content/scripts/php/admin/add_product.php" method="post">
+        <form enctype="multipart/form-data" action="./content/scripts/php/admin/add_product.php" method="post">
             <table>
                 <tr>
                     <td><h4>Имя<br><h6>Полное наименование</h6></h4></td>
@@ -69,8 +69,8 @@
                     <td><textarea class="user-input" type="text" name="description"></textarea></td>
                 </tr>
                 <tr>
-                    <td><h4>Ссылка на изображение</h4></td>
-                    <td><textarea class="user-input" type="text" name="image"></textarea></td>
+                    <td><h4>  Отправить изображение:</h4></td>
+                    <td><input name="userfile" type="file"/></td>
                 </tr>
                 <tr>
                     <td><h4>Оценка</h4></td>
