@@ -9,7 +9,6 @@
     <?php
 
     session_start();
-
     $page_format = '.php';
 
     require './content/components/header'.$page_format;
