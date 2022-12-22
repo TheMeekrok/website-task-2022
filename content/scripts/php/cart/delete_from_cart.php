@@ -1,6 +1,6 @@
 <?php
 
-require_once "..\..\..\settings\settings.php";
+require_once "..\..\..\..\settings\settings.php";
 
 session_start();
 $id_product = $_POST['id'];
@@ -20,6 +20,6 @@ foreach ($carts as $cart){
 }
 
 
-header('Location: ..\..\..\index.php?page=catalog');
+header('Location: ..\..\..\..\index.php?page=cart');
 
 ?>

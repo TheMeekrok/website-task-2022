@@ -1,6 +1,6 @@
 <?php
 
-require_once "..\..\..\settings\settings.php";
+require_once "../../../../settings/settings.php";
 
 session_start();
 $id_product = $_POST['id'];
@@ -9,7 +9,7 @@ $id_user = $_SESSION['id'];
 
 $cart = mysqli_query($connect, "SELECT * FROM `cart`");
 $carts = mysqli_fetch_all($cart);
-$flaga = false;
+$flag = false;
 
 foreach ($carts as $cart){
     if ($cart[1] == $id_user && $cart[2] == $id_product){    
@@ -25,6 +25,6 @@ if ($flag == false){
 }
 
 
-header('Location: ..\..\..\index.php?page=catalog');
+header('Location: ../../../../index.php?page=catalog');
 
 ?>

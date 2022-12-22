@@ -24,7 +24,7 @@
         <div class="__space-40"></div>
         <div class="container-flex">
             <button class="button proceed-button" type="submit">Зарегистрироваться</button>
-            </div>
+        </div>
         <div class="container-flex __margin-top-bot-50">
             <h5 class="text-center">Нажимая Зарегистрироваться, вы принимаете условия 
                 <a href="../index.php?page=register">Политики конфиденциальности</a>

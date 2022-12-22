@@ -54,40 +54,55 @@
 <div class="user-cart container-flex">
     <table class="order __cart-block">
         <?php
-            function cut_string($string, $max_symbols) {
-                if (strlen($string) > $max_symbols) {
-                    $string = substr($string, 0, $max_symbols).'...';
-                }
-            
-                return $string;
+        function cut_string($string, $max_symbols) {
+            if (strlen($string) > $max_symbols) {
+                $string = substr($string, 0, $max_symbols).'...';
             }
+        
+            return $string;
+        }
 
-            $products = mysqli_query($connect, "SELECT * FROM `products`");
-            $products = mysqli_fetch_all($products);
-            foreach ($products as $prod){
-                ?>
-                <tr class="__cart-item-tr">
-                    <!-- Изображение -->
-                    <td class="image-td"><img class="cart-item-image __cart-item" src="<?=$prod[4]?>"/></td>
-                    <!-- Информация -->
-                    <td class="info-td">
-                        <div class="container-flex flex-start __cart-item">
-                            <h4 class="cart-item-title"><?=$prod[1]?></h4>
+        $current_user = $_SESSION['id'];
+        $query = "SELECT * FROM `cart` JOIN `products` ON `products`.`id`=`cart`.`id_product` WHERE `cart`.`id_user`=$current_user;";
+
+        $products = mysqli_query($connect, $query);
+
+        $products = mysqli_fetch_all($products);
+
+        foreach ($products as $prod){
+            ?>
+            <tr class="__cart-item-tr">
+                <!-- Изображение -->
+                <td class="image-td"><img class="cart-item-image __cart-item" src="<?=$prod[8]?>"/></td>
+                <!-- Информация -->
+                <td class="info-td">
+                    <div class="container-flex flex-start __cart-item">
+                        <h4 class="cart-item-title"><?=cut_string($prod[5], 100)?></h4>
+                    </div>
+                </td>
+                <!-- Цена -->
+                <td>
+                    <div class="container-flex flex-start __cart-item">
+                        <h4 class="cart-item-title"><?=cut_string($prod[6], 100)?>₽</h4>
+                    </div>
+                </td>
+                <td>
+                    <div class="container-flex flex-start __cart-item">
+                        <h4 class="cart-item-title"><?=cut_string($prod[3], 100)?></h4>
+                    </div>
+                </td>
+                <!-- Кнопка удалить -->
+                <td>
+                    <form action="./content/scripts/php/cart/delete_from_cart.php" method="post">
+                        <input type ="text" name="id" value="<?=$prod[2]?>" style="display:none">
+                        <div class="container-flex">
+                            <button class="button delete-button" type="submit">
+                                <img class="icon" src="./content/images/admin_panel/close.svg">
+                            </button>
                         </div>
-                    </td>
-                    <!-- Цена -->
-                    <td>
-                        <div class="container-flex flex-start __cart-item">
-                            <h4 class="cart-item-title"><?=$prod[2]?>₽</h4>
-                        </div>
-                    </td>
-                    <!-- Кнопка удалить -->
-                    <td>
-                        <a class="" href="(script)"> 
-                            <img class="icon button delete-button" src="./content/images/admin_panel/close.svg">
-                        </a>
-                    </td>
-                </tr>
+                    </form>
+                </td>
+            </tr>
             <?php
             }
         ?>
@@ -99,3 +114,4 @@
         <div class="container-flex"><button class="button proceed-button" type="submit">Оформить заказ</button></div>
     </div>
 </div>
+<div class="__space-40"></div>
