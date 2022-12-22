@@ -69,11 +69,13 @@
 
         $products = mysqli_fetch_all($products);
 
+        $images_directory = "./content/images/image_product/";
+
         foreach ($products as $prod){
             ?>
             <tr class="__cart-item-tr">
                 <!-- Изображение -->
-                <td class="image-td"><img class="cart-item-image __cart-item" src="<?=$prod[8]?>"/></td>
+                <td class="image-td"><img class="cart-item-image __cart-item" src="<?=$images_directory.$prod[8]?>"/></td>
                 <!-- Информация -->
                 <td class="info-td">
                     <div class="container-flex flex-start __cart-item">

@@ -60,7 +60,7 @@
     <div class="__space-40"></div>
     <h2>Добавление товара</h2>
     <div class="__space-10"></div>
-    <div class="container-flex admin-products-form">
+    <div class="container-flex flex-start">
         <form enctype="multipart/form-data" action="./content/scripts/php/admin/add_product.php" method="post">
             <table>
                 <tr>

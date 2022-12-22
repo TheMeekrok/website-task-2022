@@ -12,15 +12,16 @@ function cut_string($string, $max_symbols) {
     return $string;
 }
 
+$images_directory = "./content/images/image_product/";
+
 foreach ($products as $prod) {
 
     $title = cut_string($prod[1], 100);
     $description = cut_string($prod[3], 300);
-
     ?>
 
 <div class="container-flex product">
-    <img class="product-image __product-block" src="<?= $prod[4] ?>"/>
+    <img class="product-image __product-block" src="<?=$images_directory.$prod[4]?>"/>
     <div class="__product-block container-flex product-info __relative">
         <div class="__space-40"></div>
         <h4 class="product-title"><?= $title ?></h4>
