@@ -15,3 +15,8 @@ $(document).ready(() => {
         $('#modalWindow').fadeIn();
     });
 });
+
+
+jQuery(function($){
+    $("#personPhoneNumber").mask("+7(908)4502900");
+    });
