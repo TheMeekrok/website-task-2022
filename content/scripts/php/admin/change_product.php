@@ -1,6 +1,13 @@
 <?php
 require_once "../../../../settings/settings.php";
 
+session_start();
+$login = $_SESSION['login'];
+$query = "SELECT `login` FROM `users` WHERE `users`.`login`=$login AND `privilege`=1;";
+$result = mysqli_query($connect, $query);
+if (!$result)
+    die(404);
+
 $id = $_POST['id'];
 $title = $_POST['title'];
 $price = $_POST['price'];
@@ -17,6 +24,6 @@ move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile);
 
 mysqli_query($connect, "UPDATE `products` SET `title` = '$title', `price` = '$price', `description` = '$description', `image` = '$image', `rating` = '$rating', `count` = '$count', `category` = '$category' WHERE `products`.`id` = '$id'");
 
-header('Location: ../../../../../index.php?page=profile');
+// header('Location: ../../../../../index.php?page=profile');
 ?>
 

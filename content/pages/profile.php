@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 $login = $_SESSION['login'];
@@ -6,9 +7,8 @@ if (!$login)
     exit(404);
 
 $id = $_SESSION['id'];
-$prod = mysqli_query($connect, "SELECT * FROM `data_user` WHERE `id_user` = '$id'");
-$prod = mysqli_fetch_assoc($prod);
-
+$query = mysqli_query($connect, "SELECT * FROM `data_user` WHERE `id_user` = '$id'");
+$user_data = mysqli_fetch_assoc($query);
 
 ?>
 
@@ -25,23 +25,23 @@ $prod = mysqli_fetch_assoc($prod);
         <table>
             <tr>
                 <td><h4>Имя<br></h4></td>
-                <td><input class="user-input" type="text"  name="personFirstName" value = "<?=$prod['first_name']?>"></td>
+                <td><input class="user-input" type="text"  name="personFirstName" value="<?=$user_data['first_name']?>"></td>
             </tr>
             <tr>
                 <td><h4>Фамилия</h4></td>
-                <td><input class="user-input" type="text" name="personSecondName" value = "<?=$prod['second_name']?>"></td>
+                <td><input class="user-input" type="text" name="personSecondName" value="<?=$user_data['second_name']?>"></td>
             </tr>
             <tr>
                 <td><h4>Дата рождения</h4></td>
-                <td><input class="user-input" type="date" name="personDateOfBirth" min="1900-01-01" max="2022-12-31" value = "<?=$prod['date']?>"></td>
+                <td><input class="user-input" type="date" name="personDateOfBirth" min="1900-01-01" max="2022-12-31" value="<?=$user_data['date']?>"></td>
             </tr>
             <tr>
                 <td><h4>Номер телефона</h4></td>
-                <td><input class="user-input" type="tel"  name="personPhoneNumber" value = "<?=$prod['phone']?>"></td>
+                <td><input class="user-input" type="tel"  name="personPhoneNumber" value="<?=$user_data['phone']?>"></td>
             </tr>
             <tr>
                 <td><h4>Электронная почта</h4></td>
-                <td><input class="user-input" type="email" maxlength=40 name="personEMail" value = "<?=$prod['mail']?>"></td>
+                <td><input class="user-input" type="email" maxlength=40 name="personEMail" value="<?=$user_data['mail']?>"></td>
             </tr>   
         </table>
         <div class="__space-10"></div>
