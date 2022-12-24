@@ -10,8 +10,11 @@ $id_user = $_SESSION['id'];
 // попытается добавить товар в корзину, то его
 // перекинет на страницу корзины, где его предупредят
 // о том, что он не не авторизирован
-if(!$id_user)
+echo ($id_user);
+if(!$id_user) {
     header('Location: ../../../../index.php?page=cart');
+    exit();
+}
 
 $cart = mysqli_query($connect, "SELECT * FROM `cart`");
 $carts = mysqli_fetch_all($cart);

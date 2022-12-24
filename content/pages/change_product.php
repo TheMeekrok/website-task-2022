@@ -1,7 +1,13 @@
 <?php
-    $id = $_GET['id'];
-    $prod = mysqli_query($connect, "SELECT * FROM `products` WHERE `id` = '$id'");
-    $prod = mysqli_fetch_assoc($prod);
+$login = $_SESSION['login'];
+$query = "SELECT `login` FROM `users` WHERE `users`.`login`=$login AND `privilege`=1;";
+$result = mysqli_query($connect, $query);
+
+handle_result_for_page($result);
+
+$id = $_GET['id'];
+$prod = mysqli_query($connect, "SELECT * FROM `products` WHERE `id` = '$id'");
+$prod = mysqli_fetch_assoc($prod);
 ?>
 
 <div class="__space-40"></div>
@@ -25,11 +31,11 @@
             </tr>
             <tr>
                 <td><h4>Описание<br><h6>не более 1000 символов</h6></h4></td>
-                <td><textarea class="user-input" type="text" name="description" ></textarea></td>
+                <td><textarea rows="4" class="user-input" type="text" name="description"><?=$prod['description']?></textarea></td>
             </tr>
             <tr>
-                    <td><h4>  Отправить изображение:</h4></td>
-                    <td><input name="userfile" type="file"/></td>
+                <td><h4>Изображение:</h4></td>
+                <td><input name="userfile" type="file"/></td>
             </tr>
             <tr>
                 <td><h4>Оценка</h4></td>

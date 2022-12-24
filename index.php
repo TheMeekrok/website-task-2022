@@ -4,19 +4,18 @@
     <?php
     require './content/components/head.php';
     require_once './settings/settings.php';
+    require_once './content/scripts/php/page_not_found/page_not_found.php';
     ?>
 <body>
     <?php
-
     session_start();
-    $page_format = '.php';
 
     require './content/components/header'.$page_format;
 
     $page = $_GET['page'];
 
     $pages = ['catalog', 'contacts', 'cart', 'profile', 'register', 'change_product'];
-    $path; $error;
+    $path;
 
     if (!$page) {
         $path =  './content/pages/home'.$page_format;
@@ -26,7 +25,6 @@
     }
     else {
         $path = './content/pages/not_found'.$page_format;
-        $error = 404;
     }
     ?>
 
