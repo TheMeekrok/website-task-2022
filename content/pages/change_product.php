@@ -1,13 +1,13 @@
 <?php
-    $login = $_SESSION['login'];
-    $query = "SELECT `login` FROM `users` WHERE `users`.`login`=$login AND `privilege`=1;";
-    $result = mysqli_query($connect, $query);
-    if (!$result)
-        die(404);
+$login = $_SESSION['login'];
+$query = "SELECT `login` FROM `users` WHERE `users`.`login`=$login AND `privilege`=1;";
+$result = mysqli_query($connect, $query);
 
-    $id = $_GET['id'];
-    $prod = mysqli_query($connect, "SELECT * FROM `products` WHERE `id` = '$id'");
-    $prod = mysqli_fetch_assoc($prod);
+handle_result_for_page($result);
+
+$id = $_GET['id'];
+$prod = mysqli_query($connect, "SELECT * FROM `products` WHERE `id` = '$id'");
+$prod = mysqli_fetch_assoc($prod);
 ?>
 
 <div class="__space-40"></div>
