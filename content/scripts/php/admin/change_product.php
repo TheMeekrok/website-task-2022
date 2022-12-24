@@ -1,6 +1,13 @@
 <?php
 require_once "../../../../settings/settings.php";
 
+session_start();
+$login = $_SESSION['login'];
+$query = "SELECT `login` FROM `users` WHERE `users`.`login`=$login AND `privilege`=1;";
+$result = mysqli_query($connect, $query);
+
+handle_result_for_page($result);
+
 $id = $_POST['id'];
 $title = $_POST['title'];
 $price = $_POST['price'];

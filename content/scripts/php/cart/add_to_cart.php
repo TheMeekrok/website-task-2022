@@ -4,14 +4,8 @@ require_once "../../../../settings/settings.php";
 
 session_start();
 $id_product = $_POST['id'];
-
 $id_user = $_SESSION['id'];
-// Если неавторизированный пользователь
-// попытается добавить товар в корзину, то его
-// перекинет на страницу корзины, где его предупредят
-// о том, что он не не авторизирован
-if(!$id_user)
-    header('Location: ../../../../index.php?page=cart');
+
 
 $cart = mysqli_query($connect, "SELECT * FROM `cart`");
 $carts = mysqli_fetch_all($cart);
