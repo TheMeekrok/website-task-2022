@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 h1,
@@ -14,6 +15,7 @@ p {
     margin: 0;
     padding: 0;
     display: inline;
+    overflow: hidden;
 }
 
 h1 {
@@ -44,4 +46,8 @@ h6 {
 a {
     text-decoration: none;
     color: #086CA2;
+}
+
+textarea {
+    resize: none;
 }

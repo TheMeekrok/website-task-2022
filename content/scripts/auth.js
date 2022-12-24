@@ -1,4 +1,6 @@
 $(document).ready(() => {
+    $('#modalWindow').removeClass('disabled');
+
     const fadeDuration = 500;
 
     $('#modalWindow').hide();
@@ -13,3 +15,8 @@ $(document).ready(() => {
         $('#modalWindow').fadeIn();
     });
 });
+
+
+jQuery(function($){
+    $("#personPhoneNumber").mask("+7(908)4502900");
+    });

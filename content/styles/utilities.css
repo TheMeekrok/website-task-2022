@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    box-sizing: border-box
 }
 
 .wrapper {
@@ -26,6 +27,10 @@
 .__margin-top-bot-50 {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.disabled {
+    display: none;
 }
 
 .text-center {
