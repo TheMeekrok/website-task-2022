@@ -4,23 +4,13 @@
 <h2>Категории</h2> 
 
 <?php
-session_start();
 $query = mysqli_query($connect, "SELECT * FROM `products`");
 $products = mysqli_fetch_all($query);
-
-function cut_string($string, $max_symbols) {
-    if (strlen($string) > $max_symbols) {
-        $string = substr($string, 0, $max_symbols).'...';
-    }
-
-    return $string;
-}
 
 $images_directory = "./content/images/image_product/ ";
 
 $query_category = mysqli_query($connect, "SELECT DISTINCT `category` FROM `products`");
 $category_arr = mysqli_fetch_all($query_category);
-
 
 foreach ($category_arr as $category) {
     ?>
@@ -29,7 +19,12 @@ foreach ($category_arr as $category) {
 }
 
 $flag = false;
+
 $categors = $_GET['category'];
+print_r($category_arr);
+// if (in_array($categors, $category_assoc))
+    // echo (123);
+
 if (isset($categors)){
     $flag = true;
 }
@@ -76,5 +71,5 @@ foreach ($products as $prod) {
             </div>
         </div>
     <?php }}
-     ?>
+    ?>
 <div class="__space-40"></div>           

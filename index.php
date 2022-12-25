@@ -3,8 +3,9 @@
     <!-- Подключение к базе данных и импорт стилей, шрифтов -->
     <?php
     require './content/components/head.php';
+
     require_once './settings/settings.php';
-    require_once './content/scripts/php/page_not_found/page_not_found.php';
+    require_once './settings/backend_functions.php';
     ?>
 <body>
     <?php

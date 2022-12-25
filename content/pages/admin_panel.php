@@ -24,14 +24,6 @@
             <th class="admin-products-th"><h5>Количество</h5></th>
         </tr>
         <?php
-            function cut_string($string, $max_symbols) {
-                if (strlen($string) > $max_symbols) {
-                    $string = substr($string, 0, $max_symbols).'...';
-                }
-            
-                return $string;
-            }
-
             $products = mysqli_query($connect, "SELECT * FROM `products`");
             $products = mysqli_fetch_all($products);
             foreach ($products as $prod){
