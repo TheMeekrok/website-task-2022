@@ -29,6 +29,10 @@
         height: 13px;
     }
 
+    .invalid_sign_in {
+        color: red;
+    }
+
     @media screen and (max-width: 767px) {
         .nav-text {
             display: none;
@@ -40,7 +44,21 @@
         }
     }
 </style>
-
+<script>
+    function valid(form) {
+        var pass1 = form.password.value;
+        var pass2 = form.password_repeat.value;
+        if (pass1 != pass2) {      
+            var s = document.getElementById("error_mes");
+            s.innerHTML  = "Пароли не совпадают";
+            s.style.color = "red";
+            return false;
+        }   
+        else {
+            return true;
+        }   
+    }
+</script>
 <header class="container-flex">
     <div class="navigation wrapper container-flex">
         <a class="container-flex nav-block" href="../index.php">
@@ -84,7 +102,7 @@
                     <button type="submit" class="button close-button container-flex" id="modalWindowClose"><img src="./content/images/nav/close.svg"></button>
                 </h2>
                 <div class="__space-40"></div>
-                <form enctype="multipart/form-data" action="./content/data_processing/sign_in.php" method="post">
+                <form enctype="multipart/form-data" action="./content/data_processing/sign_in.php" method="post" onsubmit="return valid(this);">
                     <table>
                         <style>
                             .sign-form-label-td {
@@ -103,8 +121,10 @@
                             <td><div></div></td>
                         </tr>  
                     </table>
+                        <h4 id="sign_in_error_mes" class="invalid_sign_in container-flex"></h4>
+                   
                     <div class="__space-10"></div>
-                    <div class="container-flex"><h5 class="text-center">Еще не зарегистрированы? <a href="../index.php?page=register">Зарегистрироваться</a></h5></div>
+                    <div class="container-flex"><h5 class="text-center">Еще не зарегистрированы? <a href="../index.php?page=register" >Зарегистрироваться</a></h5></div>
                     <div class="__space-10"></div>
                     <div class="container-flex"><button class="button proceed-button" type="submit">Войти</button></div>
                     <div class="__space-40"></div>

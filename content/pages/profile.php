@@ -24,11 +24,11 @@ $user_data = mysqli_fetch_assoc($query);
         <table>
             <tr>
                 <td><h4>Имя<br></h4></td>
-                <td><input class="user-input" type="text"  name="personFirstName" value="<?=$user_data['first_name']?>"></td>
+                <td><input class="user-input" type="text"  name="personFirstName" value="<?=$user_data['first_name']?>" minlength="3"></td>
             </tr>
             <tr>
                 <td><h4>Фамилия</h4></td>
-                <td><input class="user-input" type="text" name="personSecondName" value="<?=$user_data['second_name']?>"></td>
+                <td><input class="user-input" type="text" name="personSecondName" value="<?=$user_data['second_name']?>" minlength="3" ></td>
             </tr>
             <tr>
                 <td><h4>Дата рождения</h4></td>
@@ -36,11 +36,11 @@ $user_data = mysqli_fetch_assoc($query);
             </tr>
             <tr>
                 <td><h4>Номер телефона</h4></td>
-                <td><input class="user-input" type="tel"  name="personPhoneNumber" value="<?=$user_data['phone']?>"></td>
+                <td><input class="user-input" type="tel"  name="personPhoneNumber" value="<?=$user_data['phone']?>" ></td>
             </tr>
             <tr>
                 <td><h4>Электронная почта</h4></td>
-                <td><input class="user-input" type="email" maxlength=40 name="personEMail" value="<?=$user_data['mail']?>"></td>
+                <td><input class="user-input" type="email" maxlength=40 name="personEMail" value="<?=$user_data['mail']?>"  ></td>
             </tr>   
         </table>
         <div class="__space-10"></div>

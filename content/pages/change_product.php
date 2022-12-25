@@ -20,23 +20,23 @@ $prod = mysqli_fetch_assoc($prod);
         <table>
             <tr>
                 <td><h4>Имя<br><h6>Полное наименование</h6></h4></td>
-                <td><input class="user-input" type="text" name="title" value="<?=$prod['title']?>"></td>
+                <td><input class="user-input" type="text" name="title" value="<?=$prod['title']?>" minlength=3 required></td>
             </tr>
             <tr>
                 <td><h4>Категория</h4></td>
-                <td><input class="user-input" type="text" name="category" value="<?=$prod['category']?>"></td>
+                <td><input class="user-input" type="text" name="category" value="<?=$prod['category']?>" minlength=3 required></td>
             </tr>
             <tr>
                 <td><h4>Цена</h4><br><h6>(в рублях)</h6></td>
-                <td><input class="user-input" type="text" name="price" value="<?=$prod['price']?>"></td>
+                <td><input class="user-input" type="text" name="price" value="<?=$prod['price']?>" pattern="^\d+(?:[.,]\d+)?$" required></td>
             </tr>
             <tr>
                 <td><h4>Описание<br><h6>не более 1000 символов</h6></h4></td>
-                <td><textarea rows="4" class="user-input" type="text" name="description"><?=$prod['description']?></textarea></td>
+                <td><textarea rows="4" class="user-input" type="text" name="description" minlength=3 required ><?=$prod['description']?></textarea></td>
             </tr>
             <tr>
                 <td><h4>Изображение:</h4></td>
-                <td><input name="userfile" type="file"/></td>
+                <td><input name="userfile" type="file" required/></td>
             </tr>
             <tr>
                 <td><h4>Оценка</h4></td>

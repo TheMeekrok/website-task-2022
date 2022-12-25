@@ -56,31 +56,31 @@
             <table>
                 <tr>
                     <td><h4>Имя<br><h6>Полное наименование</h6></h4></td>
-                    <td><input class="user-input" type="text" name="title"></td>
+                    <td><input class="user-input" type="text" name="title" minlength=3 required></td>
                 </tr>
                 <tr>
                     <td><h4>Категория</h4></td>
-                    <td><input class="user-input" type="text" name="category"></td>
+                    <td><input class="user-input" type="text" name="category" minlength=3 required></td>
                 </tr>
                 <tr>
                     <td><h4>Цена</h4><br><h6>(в рублях)</h6></td>
-                    <td><input class="user-input" type="text" name="price"></td>
+                    <td><input class="user-input" type="text" name="price" pattern="^\d+(?:[.,]\d+)?$" required></td>
                 </tr>
                 <tr>
                     <td><h4>Описание<br><h6>не более 1000 символов</h6></h4></td>
-                    <td><textarea rows="4" class="user-input" type="text" name="description"></textarea></td>
+                    <td><textarea rows="4" class="user-input" type="text" name="description" minlength=3 required></textarea></td>
                 </tr>
                 <tr>
                     <td><h4>Изображение<br><h6>.jpg .png</h6></h4></td>
-                    <td><input name="userfile" type="file"/></td>
+                    <td><input name="userfile" type="file" required/></td>
                 </tr>
                 <tr>
                     <td><h4>Оценка</h4></td>
-                    <td><input class="user-input" type="text" name="rating"></td>
+                    <td><input class="user-input" type="text" name="rating" pattern="^\d+(?:[.,]\d+)?$" required></td>
                 </tr>
                 <tr>
                     <td><h4>Количество</h4></td>
-                    <td><input class="user-input" type="text" name="count"></td>
+                    <td><input class="user-input" type="text" name="count" pattern="^[ 0-9]+$" required></td>
                 </tr>        
             </table>
             <div class="__space-10"></div>
