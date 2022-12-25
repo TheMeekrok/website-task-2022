@@ -51,3 +51,21 @@ a {
 textarea {
     resize: none;
 }
+
+html {
+    -webkit-text-size-adjust : none;
+    text-size-adjust         : none
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea {
+    -webkit-appearance : none;
+    -moz-appearance    : none;
+    -ms-appearance     : none;
+    appearance         : none;
+    outline            : 0;
+    box-shadow         : none;
+}

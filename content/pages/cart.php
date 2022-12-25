@@ -48,17 +48,35 @@ exit(-1);
     }
     .order-detalis {
         height: 100%; width: 30%;
-        /* background: #FFBF73; */
     }
     .__cart-block {
         margin: 10px;
     }
-
     .image-td {
         width: 10%;
     }
     .info-td {
         width: 90%;
+    }
+    @media screen and (max-width: 767px) {
+        .cart-item-image {
+            width: 59px; height: 85px;
+        }
+        .__cart-item-td {
+            margin: 0px;
+        }
+        .order {
+            width: 100%;
+        }
+        .__cart-block {
+            margin: 0px;
+        }
+        .user-cart {
+            flex-flow: column;
+        }
+        .order-detalis {
+            width: 100%;
+        }
     }
 </style>
 

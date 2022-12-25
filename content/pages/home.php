@@ -49,6 +49,21 @@ $products_array = mysqli_fetch_all($products_query);
         display: flex;
         position: relative;
     }
+
+    @media screen and (max-width: 767px) {
+        .catalog-item-image {
+            width: 59px; height: 85px;
+        }
+        .__catalog-item-td {
+            margin: 0px;
+        }
+        .__catalog-block {
+            margin: 0px;
+        }
+        .catalog-description {
+            display: none;
+        }
+    }
 </style>
 
 <table class="catalog">
@@ -66,7 +81,7 @@ $products_array = mysqli_fetch_all($products_query);
                 <div class="container-flex flex-start">
                     <h4 class="catalog-item-title"><?=cut_string($prod[1], 100)?></h4>
                 </div>
-                <div class="container-flex flex-start">
+                <div class="catalog-description container-flex flex-start">
                     <p class=""><?=cut_string($prod[3], 300)?></p>
                 </div>
             </div>

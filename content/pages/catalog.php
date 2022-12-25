@@ -52,10 +52,6 @@ $products_array = mysqli_fetch_all($products_query);
     .__catalog-block {
         margin: 10px;
     }
-    .catalog-quantity {
-        position: absolute;
-        bottom: 0px;
-    }
     .catalog-price {
         width: 15%;
     }
@@ -66,8 +62,22 @@ $products_array = mysqli_fetch_all($products_query);
         width: 10%;
     }
     .info-td {
-        display: flex;
-        position: relative;
+        margin: 10px;
+    }
+
+    @media screen and (max-width: 767px) {
+        .catalog-item-image {
+            width: 63px; height: 90px;
+        }
+        .__catalog-item-td {
+            margin: 0px;
+        }
+        .__catalog-block {
+            margin: 0px;
+        }
+        .catalog-description {
+            display: none;
+        }
     }
 </style>
 
@@ -86,12 +96,12 @@ $products_array = mysqli_fetch_all($products_query);
                 <div class="container-flex flex-start">
                     <h4 class="catalog-item-title"><?=cut_string($prod[1], 100)?></h4>
                 </div>
-                <div class="container-flex flex-start">
+                <div class="catalog-description container-flex flex-start">
                     <p class=""><?=cut_string($prod[3], 300)?></p>
                 </div>
             </div>
             <div class="__space-40"></div>
-            <div class="catalog-quantity container-flex flex-start">
+            <div class="container-flex flex-start">
                 <h5>На складе: <?= $prod[6] ?></h5>
             </div>
         </td>

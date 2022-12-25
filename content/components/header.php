@@ -1,43 +1,74 @@
+<style>
+    header {
+        position: fixed;
+        top: 0%;
+        background-color: #FF8B00;
+        width: 100%;
+        height: 65px;
+        z-index: 1;
+    }
+    .nav-block {
+        height: 65px;
+        width: 100%;
+        transition: .5s;
+        justify-content: center;
+    }
+    #authButton {
+        cursor: pointer;
+    }
+    .nav-block:hover {
+        background-color: #FF8100;
+    }
+    .logo {
+        margin: 2px;
+        width: 40px;
+    }
+    .icon {
+        margin: 2px;
+        width: 13px;
+        height: 13px;
+    }
+
+    @media screen and (max-width: 767px) {
+        .nav-text {
+            display: none;
+        }
+        .icon {
+            margin: 2px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+</style>
+
 <header class="container-flex">
-    <div class="wrapper container-flex">
+    <div class="navigation wrapper container-flex">
         <a class="container-flex nav-block" href="../index.php">
             <img class="logo" src="./content/images/favicon.svg">
-            <h3 class="nav-text">
-                Family Shop
-            </h3>
+            <h3 class="nav-text">Family Shop</h3>
         </a>
         <a class="container-flex nav-block" href="../index.php?page=catalog">
-            <h4 class="nav-text">
-                <img class="icon" src="./content/images/nav/catalog.svg">
-                Каталог
-            </h4>
+            <img class="icon" src="./content/images/nav/catalog.svg">
+            <h4 class="nav-text">Каталог</h4>
         </a>
         <a class="container-flex nav-block" href="../index.php?page=contacts">
-            <h4 class="nav-text">
-                <img class="icon" src="./content/images/nav/contacts.svg">
-                Контакты
-            </h4>
+            <img class="icon" src="./content/images/nav/contacts.svg">
+            <h4 class="nav-text">Контакты</h4>
         </a>
         <a class="container-flex nav-block" href="../index.php?page=cart">
-            <h4 class="nav-text">
-                <img class="icon" src="./content/images/nav/cart.svg">
-                Корзина
-            </h4>
+            <img class="icon" src="./content/images/nav/cart.svg">
+            <h4 class="nav-text">Корзина</h4>
         </a>
     <?php if (isset($_SESSION['login'])) { ?>
         <a class="container-flex nav-block" href="../index.php?page=profile">
-            <h4 class="nav-text">
-                <img class="icon" src="./content/images/nav/user.svg">
-                Профиль
-            </h4>
+            <img class="icon" src="./content/images/nav/user.svg">
+            <h4 class="nav-text">Профиль</h4>
         </a>
     <?php }
         else { ?>
         <div class="container-flex nav-block" id="authButton">
-            <h4 class="nav-text">
-                <img class="icon" src="./content/images/nav/user.svg">
-                Войти
-            </h4>
+            <img class="icon" src="./content/images/nav/user.svg">
+            <h4 class="nav-text">Профиль</h4>
         </div>
     <?php } ?>
     </div>

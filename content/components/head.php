@@ -1,5 +1,5 @@
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" charset="UTF-8">
     <title>Family Shop</title>
 
     <!-- Иконка сайта -->
