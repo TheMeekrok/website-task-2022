@@ -102,6 +102,7 @@ $products_array = mysqli_fetch_all($products_query);
                 <h4 class="catalog-item-title"><?=cut_string($prod[2], 100)?>₽</h4>
                 <form class= "catalog-button" action = "./content/scripts/php/cart/add_to_cart.php" method="post">
                     <input type="text" name="id" value="<?=$prod[0]?>" style="display:none">
+                    <input type="text" name="category" value="<?=$current_category?>" style="display:none">
                     <button  class="button proceed-button" type="submit">В корзину</button>
                 </form>
             </div>
