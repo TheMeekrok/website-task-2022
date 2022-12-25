@@ -68,7 +68,7 @@
         else { ?>
         <div class="container-flex nav-block" id="authButton">
             <img class="icon" src="./content/images/nav/user.svg">
-            <h4 class="nav-text">Профиль</h4>
+            <h4 class="nav-text">Вход</h4>
         </div>
     <?php } ?>
     </div>
