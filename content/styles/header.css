@@ -4,6 +4,7 @@ header {
     background-color: #FF8B00;
     width: 100%;
     height: 65px;
+    z-index: 1;
 }
 
 .nav-block {

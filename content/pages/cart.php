@@ -64,14 +64,6 @@ exit(-1);
 
 <div class="user-cart container-flex">
     <?php
-    function cut_string($string, $max_symbols) {
-        if (strlen($string) > $max_symbols) {
-            $string = substr($string, 0, $max_symbols).'...';
-        }
-    
-        return $string;
-    }
-
     $current_user = $_SESSION['id'];
     $query = "SELECT * FROM `cart` JOIN `products` ON `products`.`id`=`cart`.`id_product` WHERE `cart`.`id_user`=$current_user;";
 

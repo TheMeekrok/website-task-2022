@@ -4,20 +4,18 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
 }
 
 .modal-window {
     position: absolute;
     border: 2px solid #5C3507;
     border-radius: 2px;
-    /* min-height: 364px; min-width: 350px; */
-    /* height: 30%; width: 20%; */
-    /* height: 364px; */
     background-color: #FFFFFF;
+    z-index: 101;
 }
 
 .background {
-    z-index: -1;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -33,7 +31,6 @@
 }
 
 /* Кнопки */
-
 .user-input {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 16px;

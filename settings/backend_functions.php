@@ -2,6 +2,9 @@
 //Формат страницы
 $page_format = '.php';
 
+// Директория, в которой хранятся изображения
+$images_directory = "./content/images/image_product/ ";
+
 // Обрезка строки, которая не помещается в блок
 function cut_string($string, $max_symbols) {
     if (strlen($string) > $max_symbols) {
