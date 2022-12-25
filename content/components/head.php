@@ -6,13 +6,17 @@
     <link rel="icon" type="image/x-icon" href="./content/images/favicon.svg">
 
     <!-- Импорт JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./content/scripts/jquery.min.js"></script>
 
     <script src="./content/scripts/auth.js"></script>
 
     <!-- Импорт шрифтов -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
-    <style> @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap'); </style>
+    <style>
+        @font-face {
+        font-family: IBMPlexSans-Regular;
+        src: url(content\fonts\IBM_Plex_Sans\IBMPlexSans-Light.ttf);
+        }
+    </style>
 
     <!-- Импорт стилей -->
     <link rel="stylesheet" href="./content/styles/main.css">
