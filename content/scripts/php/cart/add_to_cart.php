@@ -29,6 +29,7 @@ foreach ($carts as $cart){
     }  
 }
 
+
 if ($flag == false){
     mysqli_query($connect, "INSERT INTO `cart` (`id`, `id_user`, `id_product`) 
     VALUES (NULL,'$id_user','$id_product');");
