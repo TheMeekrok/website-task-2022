@@ -47,6 +47,7 @@ foreach ($products as $prod) {
                 <h4 class="product-price"><?= $prod[2] ?>₽</h4>
                 <form class="button add-to-cart-button" action = "./content/scripts/php/cart/add_to_cart.php" method="post">
                     <input type="text" name="id" value="<?=$prod[0]?>" style="display:none">
+                    <input type="text" name="category" value="<?=$categors?>" style="display:none">
                     <button  class="button add-to-cart-button" type="submit">В корзину</button>
                 </form>
             </div>

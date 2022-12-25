@@ -9,6 +9,7 @@ $rating = $_POST['rating'];
 $count = $_POST['count'];
 $category = $_POST['category'];
 
+
 $upload_dir = "..\..\..\images\image_product\ ";
 $upload_file = $upload_dir . basename($_FILES['userfile']['name']);
 move_uploaded_file($_FILES['userfile']['tmp_name'], $upload_file);

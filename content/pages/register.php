@@ -9,8 +9,7 @@
 </style>
 
 <div class="container-flex flex-start">
-    <!-- action="./content/scripts/php/register_user/create_user.php" -->
-    <form enctype="multipart/form-data"  method="post" id="registrationForm">
+    <form enctype="multipart/form-data" action="./content/scripts/php/register_user/create_user.php" method="post" id="registrationForm">
         <table>
             <tr>
                 <td class="__registation-form-td"><h4>Логин<br><h6>3-16 знаков, без специальных знаков и символов</h6></h4></td>

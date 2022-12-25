@@ -6,7 +6,7 @@ if (!$login)
     exit(404);
 
 $id = $_SESSION['id'];
-$query = mysqli_query($connect, "SELECT * FROM `data_user` WHERE `id_user` = '$id'");
+$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `id` = '$id'");
 $user_data = mysqli_fetch_assoc($query);
 
 ?>
