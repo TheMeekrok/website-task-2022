@@ -9,6 +9,7 @@ $id_user = $_SESSION['id'];
 $query = "DELETE FROM cart WHERE `cart`.`id_user`=$id_user";
 $cart = mysqli_query($connect, $query);
 
+
 header('Location: ../../../../index.php?page=cart');
 
 ?>
