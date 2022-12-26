@@ -95,10 +95,40 @@ $products_array = mysqli_fetch_all($products_query);
         <td class="catalog-price __catalog-item-td">
             <div class="container-flex column">
                 <h4 class="catalog-item-title"><?=cut_string($prod[2], 100)?>₽</h4>
-                <form class= "catalog-button" action = "./content/scripts/php/cart/add_to_cart.php" method="post">
-                    <input type="text" name="id" value="<?=$prod[0]?>" style="display:none">
+                <form class="catalog-button" id="addToCartID<?=$prod[0]?>">
+                    <input type="text" name="productID" value="<?=$prod[0]?>" style="display:none">
                     <button  class="button proceed-button" type="submit">В корзину</button>
                 </form>
+                <h5 class="container-flex" id="serverResponse<?=$prod[0]?>"></h5>
+                <script>
+                    $('#addToCartID<?=$prod[0]?>').submit(function (e) { 
+                        e.preventDefault();
+
+                        const responseContainer = $('#serverResponse<?=$prod[0]?>');
+                        responseContainer.hide();
+
+                        function setServerResponse(message) {
+                            responseContainer.text(message);
+                            setTimeout(() => {
+                                responseContainer.hide(200);
+                                responseContainer.text("");
+                            }, 700);
+                            responseContainer.show(200);
+                        };
+                        
+                        $.ajax({
+                            url: "content/scripts/php/cart/add_to_cart.php",
+                            type: 'POST',
+                            data: $(this).serialize(),
+                            success: function() {
+                                setServerResponse('Добавлено!');
+                            },
+                            error: function() {
+                                setServerResponse('Ошибка добавления!');
+                            },
+                        });
+                    });
+                </script>
             </div>
         </td>
     </tr>

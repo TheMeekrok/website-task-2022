@@ -1,9 +1,8 @@
 <?php
 
-require_once "../../../../settings/settings.php";
-
 session_start();
-$id_product = $_POST['id'];
+
+$id_product = $_POST['productID'];
 $id_user = $_SESSION['id'];
 $category = $_POST['category'];
 
@@ -11,11 +10,12 @@ $category = $_POST['category'];
 // попытается добавить товар в корзину, то его
 // перекинет на страницу корзины, где его предупредят
 // о том, что он не не авторизирован
-
 if(empty($id_user)) {
     header('Location: ../../../../index.php?page=cart');
     exit();
 }
+
+require_once "../../../../settings/settings.php";
 
 $cart = mysqli_query($connect, "SELECT * FROM `cart`");
 $carts = mysqli_fetch_all($cart);
@@ -35,10 +35,10 @@ if ($flag == false){
     VALUES (NULL,'$id_user','$id_product');");
 }
 
-if (empty($category)){
-    header('Location: ../../../../index.php?page=catalog');
-}
-else{
-    header('Location: ../../../../index.php?page=catalog&category='.$category);
-}
+// if (empty($category)){
+//     header('Location: ../../../../index.php?page=catalog');
+// }
+// else{
+//     header('Location: ../../../../index.php?page=catalog&category='.$category);
+// }
 ?>
