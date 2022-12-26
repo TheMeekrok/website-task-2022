@@ -75,6 +75,7 @@ $products_array = mysqli_fetch_all($products_query);
         <td class="image-td __catalog-item-td">
             <img class="catalog-item-image" src="<?=$images_directory.$prod[4]?>"/>
         </td>
+        
         <!-- Информация -->
         <td class="info-td __catalog-item-td column">
             <div class="containter-flex flex-start column">
@@ -99,7 +100,7 @@ $products_array = mysqli_fetch_all($products_query);
                     <input type="text" name="productID" value="<?=$prod[0]?>" style="display:none">
                     <button  class="button proceed-button" type="submit">В корзину</button>
                 </form>
-                <h5 class="container-flex" id="serverResponse<?=$prod[0]?>"></h5>
+                <h5 class="container-flex text-center" id="serverResponse<?=$prod[0]?>"></h5>
                 <script>
                     $('#addToCartID<?=$prod[0]?>').submit(function (e) { 
                         e.preventDefault();
@@ -115,13 +116,18 @@ $products_array = mysqli_fetch_all($products_query);
                             }, 700);
                             responseContainer.show(200);
                         };
-                        
+
                         $.ajax({
                             url: "content/scripts/php/cart/add_to_cart.php",
                             type: 'POST',
                             data: $(this).serialize(),
-                            success: function() {
-                                setServerResponse('Добавлено!');
+                            success: function(data) {
+                                if (data == 'incorrect_user'){
+                                    setServerResponse('Войдите, или зарегистрируйтесь');
+                                }
+                                else{
+                                    setServerResponse('Добавлено!');
+                                }
                             },
                             error: function() {
                                 setServerResponse('Ошибка добавления!');

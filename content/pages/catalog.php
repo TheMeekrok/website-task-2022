@@ -90,6 +90,7 @@ $products_array = mysqli_fetch_all($products_query);
         <td class="image-td __catalog-item-td">
             <img class="catalog-item-image" src="<?=$images_directory.$prod[4]?>"/>
         </td>
+
         <!-- Информация -->
         <td class="info-td __catalog-item-td column">
             <div class="containter-flex flex-start column">
@@ -101,7 +102,7 @@ $products_array = mysqli_fetch_all($products_query);
                 </div>
             </div>
             <div class="__space-40"></div>
-            <div class="container-flex flex-start">
+            <div class="catalog-quantity container-flex flex-start">
                 <h5>На складе: <?= $prod[6] ?></h5>
             </div>
         </td>
