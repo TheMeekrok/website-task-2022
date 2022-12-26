@@ -111,11 +111,11 @@
                         </style>
                         <tr>
                             <td class="sign-form-label-td"><h4>Логин<br><h6>Который указывали при регистрации</h6></h4></td>
-                            <td><input class="user-input" type="text" name="login"></td>
+                            <td><input pattern="[^@*#₽_&-+()/|'!?<>!{}0-9\[\]]{3,}" class="user-input" type="text" name="login"></td>
                         </tr>
                         <tr>
                             <td><h4>Пароль</h4></td>
-                            <td><input class="user-input" type="password" name="password"></td>
+                            <td><input pattern="[^@*#₽_&-+()/|'!?<>!{}\[\]]{3,}" class="user-input" type="password" name="password"></td>
                         </tr>  
                         <tr>
                             <td><div></div></td>
