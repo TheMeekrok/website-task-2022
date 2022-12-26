@@ -30,7 +30,7 @@
                 <td><h4 id="reg_error_mes" class="__registation-form-td"></h4></td>
             </tr>
         </table>
-        <h5 class="container-flex" id="serverResponse"></h5>
+        <h5 class="container-flex incorrect-data" id="serverResponseRegister"></h5>
 
         
         <div class="__space-10"></div>
@@ -54,15 +54,11 @@ $("#registrationForm").submit(function(e){
     e.preventDefault();
     const th = $(this);
 
-    const responseContainer = $('#serverResponse');
+    const responseContainer = $('#serverResponseRegister');
     function setServerResponse(message) {
         responseContainer.text(message);
-        setTimeout(() => {
-            responseContainer.hide(200);
-            responseContainer.text("");
-        }, 700);
-        responseContainer.show(200);
     };
+    
     
     $.ajax({
         url: './content/scripts/php/register_user/create_user.php',
@@ -70,12 +66,18 @@ $("#registrationForm").submit(function(e){
         data: th.serialize(),
         success: function(response){
             if (response == 'uncorrect_password'){
+                responseContainer.addClass('incorrect-data');
+                responseContainer.removeClass('correct-data');
                 setServerResponse("Пароли не совпадают");
             }
             else if (response == 'login_exists'){
+                responseContainer.addClass('incorrect-data');
+                responseContainer.removeClass('correct-data');
                 setServerResponse('Логин уже существует');
             }
             else{
+                responseContainer.addClass('correct-data');
+                responseContainer.removeClass('incorrect-data');
                 setServerResponse('Вы зарегистрированы');
             }
 

@@ -44,21 +44,7 @@
         }
     }
 </style>
-<script>
-    function valid(form) {
-        var pass1 = form.password.value;
-        var pass2 = form.password_repeat.value;
-        if (pass1 != pass2) {      
-            var s = document.getElementById("error_mes");
-            s.innerHTML  = "Пароли не совпадают";
-            s.style.color = "red";
-            return false;
-        }   
-        else {
-            return true;
-        }   
-    }
-</script>
+
 <header class="container-flex">
     <div class="navigation wrapper container-flex">
         <a class="container-flex nav-block" href="../index.php">
@@ -102,7 +88,7 @@
                     <!-- <button type="submit" class="button close-button container-flex" id="modalWindowClose"><img src="./content/images/nav/close.svg"></button> -->
                 </h2>
                 <div class="__space-40"></div>
-                <form enctype="multipart/form-data" action="./content/data_processing/sign_in.php" method="post" onsubmit="return valid(this);">
+                <form  id="authForm">
                     <table>
                         <style>
                             .sign-form-label-td {
@@ -121,8 +107,9 @@
                             <td><div></div></td>
                         </tr>  
                     </table>
-                        <h4 id="sign_in_error_mes" class="invalid_sign_in container-flex"></h4>
                    
+                    <h5 class="container-flex incorrect-data" id="serverResponseAuth"></h5>
+
                     <div class="__space-10"></div>
                     <div class="container-flex"><h5 class="text-center">Еще не зарегистрированы? <a href="../index.php?page=register" >Зарегистрироваться</a></h5></div>
                     <div class="__space-10"></div>
@@ -135,3 +122,31 @@
     </div>
 </div>
 
+
+<script>
+$("#authForm").submit(function(e){
+    e.preventDefault();
+    const th = $(this);
+
+    const responseContainer = $('#serverResponseAuth');
+    function setServerResponse(message) {
+        responseContainer.text(message);
+
+    };
+    
+    $.ajax({
+        url: './content/data_processing/sign_in.php',
+        method: 'POST',
+        data: th.serialize(),
+        success: function(response){
+            if (response == 'incorrect_data'){
+                setServerResponse("Неправильный логин или пароль");
+            }
+            else{
+                $('#modalWindow').hide();
+                location.reload();
+            }
+        }
+    });
+});
+</script>

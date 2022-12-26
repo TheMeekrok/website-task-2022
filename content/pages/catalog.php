@@ -114,7 +114,7 @@ $products_array = mysqli_fetch_all($products_query);
                     <input type="text" name="productID" value="<?=$prod[0]?>" style="display:none">
                     <button  class="button proceed-button" type="submit">В корзину</button>
                 </form>
-                <h5 class="container-flex" id="serverResponse<?=$prod[0]?>"></h5>
+                <h5 class="container-flex text-center" id="serverResponse<?=$prod[0]?>"></h5>
                 <script>
                     $('#addToCartID<?=$prod[0]?>').submit(function (e) { 
                         e.preventDefault();
@@ -135,8 +135,13 @@ $products_array = mysqli_fetch_all($products_query);
                             url: "content/scripts/php/cart/add_to_cart.php",
                             type: 'POST',
                             data: $(this).serialize(),
-                            success: function() {
-                                setServerResponse('Добавлено!');
+                            success: function(data) {
+                                if (data == 'incorrect_user'){
+                                    setServerResponse('Войдите, или зарегистрируйтесь');
+                                }
+                                else{
+                                    setServerResponse('Добавлено!');
+                                }
                             },
                             error: function() {
                                 setServerResponse('Ошибка добавления!');

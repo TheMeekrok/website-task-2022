@@ -43,6 +43,15 @@
     border: 2px solid #FF3900;
 }
 
+.incorrect-data{
+    color: #FF3900;
+
+}
+
+.correct-data{
+    color: green;
+}
+
 .button {
     cursor: pointer;
     opacity: 0.2;
