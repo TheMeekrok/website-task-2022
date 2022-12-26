@@ -27,17 +27,17 @@
     <form enctype="multipart/form-data" action="./content/scripts/php/register_user/create_user.php" method="post" id="registrationForm" onsubmit="return valid(this);">
         <table>
             <tr>
-                <td class="__registation-form-td"><h4>Логин<br><h6>3-16 знаков, без специальных знаков и символов</h6></h4></td>
-                <td><input class="user-input" id="loginRegInput" type="text" placeholder="Введите логин"  minlength="3" maxlength="16" name="login" required></td>
+                <td class="__registation-form-td"><h4>Логин<br><h6>6-16 знаков, без специальных знаков и символов</h6></h4></td>
+                <td><input class="user-input" id="loginRegInput" type="text" placeholder="Введите логин"  minlength="6" maxlength="16" name="login" required></td>
             </tr>
             <tr><td></td><td></td></tr>
             <tr>
-                <td class="__registation-form-td"><h4>Пароль<br><h6>3-16 знаков, без специальных знаков и символов</h6></h4></td>
-                <td><input class="user-input" id="passwordRegInput" type="password" placeholder="Введите пароль" minlength="3" maxlength="16" name="password" required></td>
+                <td class="__registation-form-td"><h4>Пароль<br><h6>6-16 знаков, без специальных знаков и символов</h6></h4></td>
+                <td><input class="user-input" id="passwordRegInput" type="password" placeholder="Введите пароль" minlength="6" maxlength="16" name="password" required></td>
             </tr>
             <tr><td></td><td></td></tr>
             <tr>
-                <td class="__registation-form-td"><h4>Повторите пароль<br><h6>3-16 знаков, без специальных знаков и символов</h6></h4></td>
+                <td class="__registation-form-td"><h4>Повторите пароль<br><h6>6-16 знаков, без специальных знаков и символов</h6></h4></td>
                 <td><input class="user-input" id="repeatPasswordRegInput" type="password" placeholder="Повторите пароль" minlength="6" maxlength="16" name="password_repeat" required></td>
             </tr>
             <tr>
