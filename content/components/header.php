@@ -99,7 +99,7 @@
             <div class="modal-wrapper container-flex column">
                 <h2 class="modal-title container-flex">
                     Авторизация
-                    <button type="submit" class="button close-button container-flex" id="modalWindowClose"><img src="./content/images/nav/close.svg"></button>
+                    <!-- <button type="submit" class="button close-button container-flex" id="modalWindowClose"><img src="./content/images/nav/close.svg"></button> -->
                 </h2>
                 <div class="__space-40"></div>
                 <form enctype="multipart/form-data" action="./content/data_processing/sign_in.php" method="post" onsubmit="return valid(this);">

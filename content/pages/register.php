@@ -7,24 +7,10 @@
         width: 50%;
     }
 </style>
-<script type="text/javascript"> 
-    function valid(form) {
-        var pass1 = form.password.value;
-        var pass2 = form.password_repeat.value;
-        if (pass1 != pass2) {      
-            var s = document.getElementById("reg_error_mes");
-            s.innerHTML  = "Пароли не совпадают";
-                s.style.color = "red";
-            return false;
-        }   
-        else {
-            return true;
-        }
-    }
-</script>
+
 
 <div class="container-flex flex-start">
-    <form enctype="multipart/form-data" action="./content/scripts/php/register_user/create_user.php" method="post" id="registrationForm" onsubmit="return valid(this);">
+    <form id="registrationForm">
         <table>
             <tr>
                 <td class="__registation-form-td"><h4>Логин<br><h6>6-16 знаков, без специальных знаков и символов</h6></h4></td>
@@ -44,6 +30,8 @@
                 <td><h4 id="reg_error_mes" class="__registation-form-td"></h4></td>
             </tr>
         </table>
+        <h5 class="container-flex" id="serverResponse"></h5>
+
         
         <div class="__space-10"></div>
         <div class="container-flex"><button class="button proceed-button" type="submit">Зарегистрироваться</button></div>
@@ -62,8 +50,37 @@
 </div>
 
 <script>
-$(function() {
+$("#registrationForm").submit(function(e){
+    e.preventDefault();
+    const th = $(this);
 
+    const responseContainer = $('#serverResponse');
+    function setServerResponse(message) {
+        responseContainer.text(message);
+        setTimeout(() => {
+            responseContainer.hide(200);
+            responseContainer.text("");
+        }, 700);
+        responseContainer.show(200);
+    };
+    
+    $.ajax({
+        url: './content/scripts/php/register_user/create_user.php',
+        method: 'POST',
+        data: th.serialize(),
+        success: function(response){
+            if (response == 'uncorrect_password'){
+                setServerResponse("Пароли не совпадают");
+            }
+            else if (response == 'login_exists'){
+                setServerResponse('Логин уже существует');
+            }
+            else{
+                setServerResponse('Вы зарегистрированы');
+            }
+
+        }
+    });
 });
 </script>
 
